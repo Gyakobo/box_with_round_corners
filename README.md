@@ -25,3 +25,4 @@
 5. Party Parrot, Mario juming, Sonic Running
 6. "Game of Life" by John Conway
 7. Bad Apple Intro
+8. Pixelated NFTs
