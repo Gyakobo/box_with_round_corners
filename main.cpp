@@ -2,24 +2,26 @@
 
 using namespace std;
 
-const int width = 800, height = 800;
+const int width = 1280, height = 720;
 
 int main() {
 	Window window("Box Simulator", width, height);
 
 	Shader shader("shaders/vertex_shader.glsl", "shaders/fragment_shader.glsl", "shaders/geometric_shader.glsl");
 	shader.enable();
-	shader.setUniformMat4("ml_matrix", mat4::translation(vec3(-150.0f, 0.0f, -105.0f)));
+	shader.setUniformMat4("ml_matrix", mat4::translation(vec3(-8, -8, 0.0f)));
 
-	//glViewport(0, 0, width, height);
+	glViewport(0, 0, width, height);
 
-	Grid grid(1, 1);
+	Grid grid;
 	TileLayer layer(&shader);
 	vector<Renderable2D*> sprites = grid.getRenderables();
 	for (int i=0; i<sprites.size(); i++) layer.add(sprites.at(i));
 
-
 	float x, y;
+	
+	chrono::steady_clock::time_point begin = chrono::steady_clock::now();	
+	chrono::steady_clock::time_point end = begin;	
 
 	while (!window.closed()) {
 		window.clear();
@@ -28,6 +30,12 @@ int main() {
 
 		//clear();
 		//printf("x = %f, y = %f\n", x, y);
+
+		end = chrono::steady_clock::now();
+		double elapsed_secs = chrono::duration_cast<chrono::microseconds>(end - begin).count() / 1000000.0;
+		//begin = end;
+
+		printf("time = %f\n", elapsed_secs);
 
 		shader.enable();
 

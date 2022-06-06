@@ -33,8 +33,6 @@ y
 
 class Grid {
 private:
-	int width, height;	
-
 	vector<Renderable2D*> sprites = {};
 
 	void Pong();
@@ -43,7 +41,7 @@ private:
 	void Space_Invaders();
 
 public:
-	Grid(int width, int height);
+	Grid();
 
 	vector<Renderable2D*> getRenderables() { return sprites; }
 

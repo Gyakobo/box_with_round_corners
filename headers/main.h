@@ -9,6 +9,11 @@
 #include <GLFW/glfw3.h>
 #include <cstdint>
 
+// Time
+#include <ctime>
+#include <chrono>
+#include <sys/time.h>
+
 // Defines
 //#define clear() printf("\033[H\033[J")
 
