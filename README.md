@@ -19,7 +19,7 @@
 
 # Animation To-Do list
 
-1. Teardrop Animation(Image of Initialisation)
+1. Teardrop Animation (Image of Initialisation)
 2. Fire Animation
 3. Music Mode
 4. Adafruit Matrix Portal (Basically your fluid simulator) https://www.adafruit.com/product/4745
