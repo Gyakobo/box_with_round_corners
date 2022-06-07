@@ -32,13 +32,18 @@ int main() {
 		//clear();
 		//printf("x = %f, y = %f\n", x, y);
 
-		end = chrono::steady_clock::now();
-		double elapsed_secs = chrono::duration_cast<chrono::microseconds>(end - begin).count() / 1000000.0;
+		//end = chrono::steady_clock::now();
+		//double elapsed_secs = chrono::duration_cast<chrono::microseconds>(end - begin).count() / 1000000.0;
 		//begin = end;
 
 		//printf("time = %f\n", elapsed_secs);
 
-		shader.enable();
+		for (int i=0; i<100; i++);
+		grid.Random();
+		grid.update();
+		layer.clean_slate();
+		vector<Renderable2D*> sprites = grid.getRenderables();
+		for (int i=0; i<sprites.size(); i++) layer.add(sprites.at(i));
 
 		window.getMousePosition(x, y);
 

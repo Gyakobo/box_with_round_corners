@@ -4,18 +4,20 @@ Grid::Grid() {
     //srand(time(NULL));
 
     vector<vec4> row_color;
+    vec4 color = DEFAULT;
+
     for (int i=0; i<32; i++) {
-        row_color.push_back(WHITE);
+        row_color.push_back(color);
     }
     for (int i=0; i<32; i++) {
-        color.push_back(row_color);
+        this->color.push_back(row_color);
     }
 
 
 
     for (int x=0; x<32; x++) {
         for (int y=0; y<32; y++) {
-            DrawOnScreen(x, y, WHITE);
+            DrawOnScreen(x, y, color);
         }
     }
 
@@ -39,7 +41,6 @@ void Grid::update() {
     
     for (float x=0; x<16; x+=0.5f) {
         for (float y=0; y<16; y+=0.5f) {
-            //vec4 color = RAND_COLOR;
             vec4 m_color = color.at(i).at(j);
 
             sprites.push_back(new Sprite(v1+vec3(x, y, 0), v2+vec3(x, y, 0)-vec3(space_offset, 0, 0), v3+vec3(x, y, 0)-vec3(space_offset, space_offset, 0), m_color));
@@ -53,9 +54,24 @@ void Grid::update() {
     }
 }
 
+void Grid::Random() {
+    srand(time(NULL));
+
+    vector<vec4> row_color;
+
+    for (int i=0; i<32; i++) {
+        row_color.push_back(DEFAULT);
+    }
+    for (int i=0; i<32; i++) {
+        this->color.push_back(row_color);
+    }
 
 
-void Grid::Pong() {
 
+    for (int x=0; x<32; x++) {
+        for (int y=0; y<32; y++) {
+            vec4 color = RANDOM_COLOR;
+            DrawOnScreen(x, y, color);
+        }
+    }
 }
-
