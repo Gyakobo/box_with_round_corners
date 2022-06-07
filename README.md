@@ -19,7 +19,7 @@
 
 # Animation To-Do list
 
-1. Teardrop Animation
+1. Teardrop Animation(Image of Initialisation)
 2. Fire Animation
 3. Music Mode
 4. Adafruit Matrix Portal (Basically your fluid simulator) https://www.adafruit.com/product/4745
@@ -27,3 +27,8 @@
 6. "Game of Life" by John Conway
 7. Bad Apple Intro
 8. Pixelated NFTs
+9. Rick Astley "Never Gonna Give You Up"
+
+# Network To-Do list
+
+1. Simple Decentralisation
