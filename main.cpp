@@ -35,7 +35,7 @@ int main() {
 		double elapsed_secs = chrono::duration_cast<chrono::microseconds>(end - begin).count() / 1000000.0;
 		//begin = end;
 
-		printf("time = %f\n", elapsed_secs);
+		//printf("time = %f\n", elapsed_secs);
 
 		shader.enable();
 
