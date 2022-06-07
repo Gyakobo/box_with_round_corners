@@ -44,10 +44,11 @@ private:
 	void Tetris();
 	void Space_Invaders();
 
-	void update();
 
 public:
 	Grid();
+	
+	void update();
 
 	vector<Renderable2D*> getRenderables() { return sprites; }
 

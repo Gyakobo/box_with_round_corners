@@ -14,6 +14,7 @@ int main() {
 	glViewport(0, 0, width, height);
 
 	Grid grid;
+	grid.update();
 	TileLayer layer(&shader);
 	vector<Renderable2D*> sprites = grid.getRenderables();
 	for (int i=0; i<sprites.size(); i++) layer.add(sprites.at(i));
