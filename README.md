@@ -16,7 +16,8 @@
 14. Etch-A-Sketch
 15. Balancing Board Game
 16. Wordle
-17. DOOM
+17. 2048
+18. DOOM
 
 # Animation To-Do list
 
