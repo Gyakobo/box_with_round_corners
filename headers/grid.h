@@ -37,7 +37,7 @@ private:
 	vector<Renderable2D*> sprites = {};
 
 	vector<vector<vec4>> color;
-	void DrawOnScreen(int x, int y, vec4 color);
+	void DrawOnScreen(int& x, int& y, const vec4& color);
 
 
 	/* Future poleomorhic virtual classes 
@@ -52,10 +52,13 @@ public:
 	Grid();
 	
 	void update();
+	void Default_State();
 	void Random();
+
 
 	vector<Renderable2D*> getRenderables() { return sprites; }
 };
 
+void randomize();
 
 #endif

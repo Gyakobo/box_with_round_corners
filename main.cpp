@@ -23,6 +23,8 @@ int main() {
 	
 	chrono::steady_clock::time_point begin = chrono::steady_clock::now();	
 	chrono::steady_clock::time_point end = begin;	
+	
+	double elapsed_secs = 0.0f;
 
 	while (!window.closed()) {
 		window.clear();
@@ -32,24 +34,31 @@ int main() {
 		//clear();
 		//printf("x = %f, y = %f\n", x, y);
 
-		//end = chrono::steady_clock::now();
-		//double elapsed_secs = chrono::duration_cast<chrono::microseconds>(end - begin).count() / 1000000.0;
-		//begin = end;
 
 		//printf("time = %f\n", elapsed_secs);
 
-		for (int i=0; i<100; i++);
-		grid.Random();
-		grid.update();
-		layer.clean_slate();
-		vector<Renderable2D*> sprites = grid.getRenderables();
-		for (int i=0; i<sprites.size(); i++) layer.add(sprites.at(i));
+		if (elapsed_secs >= 500000.0f) {
+			grid.Default_State();
+			//grid.Random();
+			grid.update();
+			layer.clean_slate();
+			vector<Renderable2D*> sprites = grid.getRenderables();
+			for (int i=0; i<sprites.size(); i++) layer.add(sprites.at(i));
+		
+			begin = chrono::steady_clock::now();
+		}
 
+		shader.enable();
+
+		end = chrono::steady_clock::now();
+		elapsed_secs = chrono::duration_cast<chrono::microseconds>(end - begin).count() * 1.0f;
+
+	
 		window.getMousePosition(x, y);
 
 		shader.enable();
 		layer.render();
-
+		
 		window.update();
 
 	}	

@@ -1,10 +1,8 @@
 #include "../headers/grid.h"
 
 Grid::Grid() {
-    //srand(time(NULL));
-
     vector<vec4> row_color;
-    vec4 color = DEFAULT;
+    const vec4 color = DEFAULT;
 
     for (int i=0; i<32; i++) {
         row_color.push_back(color);
@@ -23,7 +21,7 @@ Grid::Grid() {
 
 }
 
-void Grid::DrawOnScreen(int x, int y, vec4 color) {
+void Grid::DrawOnScreen(int& x, int& y, const vec4& color) {
     this->color.at(x).at(y) = color;
 }
 
@@ -54,10 +52,35 @@ void Grid::update() {
     }
 }
 
-void Grid::Random() {
-    srand(time(NULL));
+void Grid::Default_State() {
+    randomize();
 
     vector<vec4> row_color;
+    vec4 color;
+    double alpha = 1.0f;
+
+    for (int i=0; i<32; i++) {
+        row_color.push_back(DEFAULT);
+    }
+    for (int i=0; i<32; i++) {
+        this->color.push_back(row_color);
+    }
+    
+    
+    for (int x=0; x<32; x++) {
+        for (int y=0; y<32; y++) {
+            alpha = rand()%1000/1000.0f;
+            color = vec4(255*alpha, 0, 0, 1);
+            DrawOnScreen(x, y, color);
+        }
+    }
+}
+
+void Grid::Random() {
+    randomize();
+
+    vector<vec4> row_color;
+    vec4 color;
 
     for (int i=0; i<32; i++) {
         row_color.push_back(DEFAULT);
@@ -67,11 +90,21 @@ void Grid::Random() {
     }
 
 
-
     for (int x=0; x<32; x++) {
         for (int y=0; y<32; y++) {
-            vec4 color = RANDOM_COLOR;
+            color = RANDOM_COLOR;
             DrawOnScreen(x, y, color);
         }
     }
 }
+
+void randomize() {
+    uint32_t seed=0;
+    FILE *devrnd = fopen("/dev/random", "r");
+    fread(&seed, 4, 1, devrnd);
+    fclose(devrnd);
+    srand(seed);
+}
+
+
+

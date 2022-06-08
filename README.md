@@ -9,15 +9,14 @@
 7. Space Invaders/ Galaga
 8. Chess
 9. Connect Four
-10. Tetris
-11. Checkers
-12. Asteroids
-13. Battleship
-14. Etch-A-Sketch
-15. Balancing Board Game
-16. Wordle
-17. 2048
-18. DOOM
+10. Checkers
+11. Asteroids
+12. Battleship
+13. Etch-A-Sketch
+14. Balancing Board Game
+15. Wordle
+16. 2048
+17. DOOM
 
 # Animation To-Do list
 
