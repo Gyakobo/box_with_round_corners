@@ -15,7 +15,8 @@
 13. Battleship
 14. Etch-A-Sketch
 15. Balancing Board Game
-16. DOOM
+16. Wordle
+17. DOOM
 
 # Animation To-Do list
 
@@ -26,7 +27,7 @@
 5. Party Parrot, Mario juming, Sonic Running
 6. "Game of Life" by John Conway
 7. Bad Apple Intro
-8. Pixelated NFTs
+8. Pixelated NFTs and pictures (Mona Lisa)
 9. Rick Astley "Never Gonna Give You Up"
 
 # Network To-Do list
