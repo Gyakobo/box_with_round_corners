@@ -1,34 +1,35 @@
 # Arcade Games To-Do list
 
 1. Pong
-2. Snake
-3. Pacman
-4. Tetris
-5. Minesweeper
-6. Atari Breakout
-7. Space Invaders/ Galaga
-8. Chess
-9. Connect Four
-10. Checkers
-11. Asteroids
-12. Battleship
-13. Etch-A-Sketch
-14. Balancing Board Game
-15. Wordle
-16. 2048
-17. DOOM
+1. Snake
+1. Pacman
+1. Tetris
+1. Minesweeper
+1. Atari Breakout
+1. Space Invaders/ Galaga
+1. Chess
+1. Connect Four
+1. Checkers
+1. Asteroids
+1. Battleship
+1. Etch-A-Sketch
+1. Balancing Board Game
+1. Wordle
+1. 2048
+1. DOOM
 
 # Animation To-Do list
 
 1. Teardrop Animation (Image of Initialisation)
-2. Fire Animation
-3. Music Mode
-4. Adafruit Matrix Portal (Basically your fluid simulator) https://www.adafruit.com/product/4745
-5. Party Parrot, Mario juming, Sonic Running
-6. "Game of Life" by John Conway
-7. Bad Apple Intro
-8. Pixelated NFTs and pictures (Mona Lisa)
-9. Rick Astley "Never Gonna Give You Up"
+1. Fire Animation
+1. Sound Amplifier 
+1. Adafruit Matrix Portal (Basically your fluid simulator) https://www.adafruit.com/product/4745
+1. Party Parrot, Mario juming, Sonic Running
+1. "Game of Life" by John Conway
+1. Bad Apple Intro
+1. Pixelated NFTs and pictures (Mona Lisa, smth associated with Rick and Morty)
+1. Rick Astley "Never Gonna Give You Up"
+1. Emulate a clock and (Basically emulate this https://www.amazon.com/gp/product/B07H7L1PLD/ref=ox_sc_act_image_1?smid=AMLS2NRKTFGS9&psc=1)
 
 # Network To-Do list
 
