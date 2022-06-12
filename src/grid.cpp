@@ -107,6 +107,22 @@ void Grid::alpha_numeric_test() {
         }
         next_numbers += 6;
     }*/
+
+
+    for (int character=0; character<6; character++) {
+        for (int x=0; x<letter[character].at(0).size(); x++) {
+            for (int y=0; y<7; y++) {
+                y_ = 8*4 - 1 - y; 
+                x_ = x + character*5;
+                if (letter.at(character).at(y).at(x))
+                    DrawOnScreen(x_, y_, WHITE);
+                else
+                    DrawOnScreen(x_, y_, BLACK);
+            }
+        } 
+    }
+
+
 }
 
 
