@@ -4,6 +4,7 @@
 // Essentials
 #include <stdio.h>
 #include <math.h>
+#include <map>
 
 // Dependancies
 #include <vector>
@@ -67,24 +68,24 @@ const vector<vector<vec4>> letter_D = {
 
 // Letter E
 const vector<vector<vec4>> letter_E = {   
-    { BLACK,WHITE,WHITE,WHITE }, 
-    { BLACK,WHITE,BLACK,BLACK },
-    { BLACK,WHITE,BLACK,BLACK },
-    { BLACK,WHITE,WHITE,WHITE },
-    { BLACK,WHITE,BLACK,BLACK },
-    { BLACK,WHITE,BLACK,BLACK },
-    { BLACK,WHITE,WHITE,WHITE } 
+    { WHITE,WHITE,WHITE }, 
+    { WHITE,BLACK,BLACK },
+    { WHITE,BLACK,BLACK },
+    { WHITE,WHITE,WHITE },
+    { WHITE,BLACK,BLACK },
+    { WHITE,BLACK,BLACK },
+    { WHITE,WHITE,WHITE } 
 };
 
 // Letter F
 const vector<vector<vec4>> letter_F = {   
-    { BLACK,WHITE,WHITE,WHITE }, 
-    { BLACK,WHITE,BLACK,BLACK },
-    { BLACK,WHITE,BLACK,BLACK },
-    { BLACK,WHITE,WHITE,BLACK },
-    { BLACK,WHITE,BLACK,BLACK },
-    { BLACK,WHITE,BLACK,BLACK },
-    { BLACK,WHITE,BLACK,BLACK } 
+    { WHITE,WHITE,WHITE }, 
+    { WHITE,BLACK,BLACK },
+    { WHITE,BLACK,BLACK },
+    { WHITE,WHITE,BLACK },
+    { WHITE,BLACK,BLACK },
+    { WHITE,BLACK,BLACK },
+    { WHITE,BLACK,BLACK } 
 };
 
 // Letter G
@@ -111,13 +112,13 @@ const vector<vector<vec4>> letter_H = {
 
 // Letter I
 const vector<vector<vec4>> letter_I = {   
-    { BLACK,WHITE,WHITE,WHITE },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,WHITE,WHITE,WHITE },
+    { WHITE,WHITE,WHITE },
+    { BLACK,WHITE,BLACK },
+    { BLACK,WHITE,BLACK },
+    { BLACK,WHITE,BLACK },
+    { BLACK,WHITE,BLACK },
+    { BLACK,WHITE,BLACK },
+    { WHITE,WHITE,WHITE },
 };
 
 // Letter J
@@ -144,13 +145,13 @@ const vector<vector<vec4>> letter_K = {
 
 // Letter L
 const vector<vector<vec4>> letter_L = {   
-    { BLACK,WHITE,BLACK,BLACK }, 
-    { BLACK,WHITE,BLACK,BLACK },
-    { BLACK,WHITE,BLACK,BLACK },
-    { BLACK,WHITE,BLACK,BLACK },
-    { BLACK,WHITE,BLACK,BLACK },
-    { BLACK,WHITE,BLACK,BLACK },
-    { BLACK,WHITE,WHITE,WHITE } 
+    { WHITE,BLACK,BLACK }, 
+    { WHITE,BLACK,BLACK },
+    { WHITE,BLACK,BLACK },
+    { WHITE,BLACK,BLACK },
+    { WHITE,BLACK,BLACK },
+    { WHITE,BLACK,BLACK },
+    { WHITE,WHITE,WHITE } 
 };
 
 // Letter M, has 5 x-elements  
@@ -232,13 +233,13 @@ const vector<vector<vec4>> letter_S = {
 
 // Letter T
 const vector<vector<vec4>> letter_T = {   
-    { BLACK,WHITE,WHITE,WHITE }, 
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,BLACK,WHITE,BLACK } 
+    { WHITE,WHITE,WHITE }, 
+    { BLACK,WHITE,BLACK },
+    { BLACK,WHITE,BLACK },
+    { BLACK,WHITE,BLACK },
+    { BLACK,WHITE,BLACK },
+    { BLACK,WHITE,BLACK },
+    { BLACK,WHITE,BLACK } 
 };
 
 // Letter U
@@ -287,42 +288,82 @@ const vector<vector<vec4>> letter_X = {
 
 // Letter Y 
 const vector<vector<vec4>> letter_Y = {   
-    { BLACK,WHITE,BLACK,WHITE }, 
-    { BLACK,WHITE,BLACK,WHITE },
-    { BLACK,WHITE,BLACK,WHITE },
-    { BLACK,WHITE,WHITE,WHITE },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,BLACK,WHITE,BLACK } 
+    { WHITE,BLACK,WHITE }, 
+    { WHITE,BLACK,WHITE },
+    { WHITE,BLACK,WHITE },
+    { WHITE,WHITE,WHITE },
+    { BLACK,WHITE,BLACK },
+    { BLACK,WHITE,BLACK },
+    { BLACK,WHITE,BLACK } 
 };
 
 // Letter Z 
 const vector<vector<vec4>> letter_Z = {   
-    { BLACK,WHITE,WHITE,WHITE }, 
-    { BLACK,BLACK,BLACK,WHITE },
-    { BLACK,BLACK,BLACK,WHITE },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,WHITE,BLACK,BLACK },
-    { BLACK,WHITE,BLACK,BLACK },
-    { BLACK,WHITE,WHITE,WHITE } 
+    { WHITE,WHITE,WHITE }, 
+    { BLACK,BLACK,WHITE },
+    { BLACK,BLACK,WHITE },
+    { BLACK,WHITE,BLACK },
+    { WHITE,BLACK,BLACK },
+    { WHITE,BLACK,BLACK },
+    { WHITE,WHITE,WHITE } 
 };
+
+const vector<vector<vector<vec4>>> letter = { letter_A, letter_B, letter_C, letter_D, letter_E, letter_F, letter_G, letter_H, letter_I, letter_J, letter_K, letter_L, letter_M, letter_N, letter_O, letter_P, letter_Q, letter_R, letter_S, letter_T, letter_U, letter_V, letter_W, letter_X, letter_Y, letter_Z };
+
+const map<char, vector<vector<vec4>>> dict_letter = {
+	{'A', letter_A},
+	{'B', letter_B},
+	{'C', letter_C},
+	{'D', letter_D},
+	{'E', letter_E},
+	{'F', letter_F},
+	{'G', letter_G},
+	{'H', letter_H},
+	{'J', letter_J},
+	{'K', letter_K},
+	{'L', letter_L},
+	{'M', letter_M},
+	{'N', letter_N},
+	{'O', letter_O},
+	{'P', letter_P},
+	{'Q', letter_Q},
+	{'R', letter_R},
+	{'S', letter_S},
+	{'T', letter_T},
+	{'U', letter_U},
+	{'V', letter_V},
+	{'W', letter_W},
+	{'X', letter_X},
+	{'Y', letter_Y},
+	{'Z', letter_Z}
+};
+
+
 
 
 
 // ------------------------------------------Sprites of numbers------------------------------------------
 
 // Number 0
-const vector<vector<vec4>> number_0 = letter_O;   
+const vector<vector<vec4>> number_0 = {
+    { BLACK,WHITE,WHITE,BLACK }, 
+    { WHITE,BLACK,BLACK,WHITE },
+    { WHITE,BLACK,BLACK,WHITE },
+    { WHITE,BLACK,WHITE,WHITE },
+    { WHITE,WHITE,BLACK,WHITE },
+    { WHITE,BLACK,BLACK,WHITE },
+    { BLACK,WHITE,WHITE,BLACK } 
+};   
 
 // Number 1
 const vector<vector<vec4>> number_1 = {   
-    { BLACK,BLACK,WHITE,BLACK }, 
-    { BLACK,WHITE,WHITE,BLACK },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,BLACK,WHITE,BLACK },
-    { BLACK,WHITE,WHITE,WHITE }
+    { BLACK,WHITE,BLACK }, 
+    { WHITE,WHITE,BLACK },
+    { BLACK,WHITE,BLACK },
+    { BLACK,WHITE,BLACK },
+    { BLACK,WHITE,BLACK },
+    { BLACK,WHITE,BLACK },
+    { WHITE,WHITE,WHITE }
 };
 
 // Number 2

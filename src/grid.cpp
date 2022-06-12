@@ -93,7 +93,7 @@ void Grid::alpha_numeric_test() {
 
     int next_numbers = 0;
 
-    for (int y_increment=0; y_increment<9; y_increment+=8) {
+    /*for (int y_increment=0; y_increment<9; y_increment+=8) {
         for (int numb=0; numb<6; numb++) {
             for (int x=0; x<4; x++) {
                 for (int y=0; y<7; y++) {
@@ -101,12 +101,12 @@ void Grid::alpha_numeric_test() {
                     y_ = 8*4 - 1 - (y+y_increment); 
                     x_ = x + numb*5;
                     if (numb+next_numbers < 10)
-                        DrawOnScreen(x_, y_, number.at(numb+next_numbers).at(y).at(x));
+                        DrawOnScreen(x_, y_, letter.at(numb+next_numbers).at(y).at(x));
                 }
             }
         }
         next_numbers += 6;
-    }
+    }*/
 }
 
 
