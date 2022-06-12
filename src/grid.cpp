@@ -91,18 +91,6 @@ void Grid::alpha_numeric_test() {
     int y_=0;
     int x_=0;
 
-    vector<vector<vector<vec4>>> number;
-    number.push_back(number_0);
-    number.push_back(number_1);
-    number.push_back(number_2);
-    number.push_back(number_3);
-    number.push_back(number_4);
-    number.push_back(number_5);
-    number.push_back(number_6);
-    number.push_back(number_7);
-    number.push_back(number_8);
-    number.push_back(number_9);
-
     int next_numbers = 0;
 
     for (int y_increment=0; y_increment<9; y_increment+=8) {
@@ -112,11 +100,12 @@ void Grid::alpha_numeric_test() {
                     color = RANDOM_COLOR;
                     y_ = 8*4 - 1 - (y+y_increment); 
                     x_ = x + numb*5;
-                    DrawOnScreen(x_, y_, number.at(numb+next_numbers).at(y).at(x));
+                    if (numb+next_numbers < 10)
+                        DrawOnScreen(x_, y_, number.at(numb+next_numbers).at(y).at(x));
                 }
             }
         }
-        next_numbers += 4;
+        next_numbers += 6;
     }
 }
 
