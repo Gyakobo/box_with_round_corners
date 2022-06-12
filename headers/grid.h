@@ -7,14 +7,15 @@
 
 // Dependancies
 #include <vector>
-#include "alpha_numeric.h"
 #include "Renderable2D.h"
 #include "sprite.h"
+
+#include "alpha_numeric.h"
 
 using namespace std;
 
 /*
-y - is inversed
+y - is inversed in this graph
 ^
 |
 |
@@ -40,7 +41,8 @@ private:
 
 public:
 	Grid();
-	
+
+	void alpha_numeric_test();	
 	void update();
 	void Default_State();
 	void Random();

@@ -76,6 +76,51 @@ void Grid::Default_State() {
     }
 }
 
+void Grid::alpha_numeric_test() {
+    vector<vec4> row_color;
+    vec4 color;
+
+    for (int i=0; i<32; i++) {
+        row_color.push_back(DEFAULT);
+    }
+    for (int i=0; i<32; i++) {
+        sprite.push_back(row_color);
+    }
+
+
+    int y_=0;
+    int x_=0;
+
+    vector<vector<vector<vec4>>> number;
+    number.push_back(number_0);
+    number.push_back(number_1);
+    number.push_back(number_2);
+    number.push_back(number_3);
+    number.push_back(number_4);
+    number.push_back(number_5);
+    number.push_back(number_6);
+    number.push_back(number_7);
+    number.push_back(number_8);
+    number.push_back(number_9);
+
+    int next_numbers = 0;
+
+    for (int y_increment=0; y_increment<9; y_increment+=8) {
+        for (int numb=0; numb<6; numb++) {
+            for (int x=0; x<4; x++) {
+                for (int y=0; y<7; y++) {
+                    color = RANDOM_COLOR;
+                    y_ = 8*4 - 1 - (y+y_increment); 
+                    x_ = x + numb*5;
+                    DrawOnScreen(x_, y_, number.at(numb+next_numbers).at(y).at(x));
+                }
+            }
+        }
+        next_numbers += 4;
+    }
+}
+
+
 void Grid::Random() {
     randomize();
 

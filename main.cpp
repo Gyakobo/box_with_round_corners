@@ -37,9 +37,10 @@ int main() {
 
 		//printf("time = %f\n", elapsed_secs);
 
-		if (elapsed_secs >= 500000.0f) {
+		if (elapsed_secs >= 5000.0f) {
 			//grid.Default_State();
-			grid.Random();
+			//grid.Random();
+			grid.alpha_numeric_test();
 			grid.update();
 			layer.clean_slate();
 			vector<Renderable2D*> sprites = grid.getRenderables();
