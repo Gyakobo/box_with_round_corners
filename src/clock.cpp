@@ -1,7 +1,7 @@
 #include "../headers/clock.h"
 
 Clock::Clock() {
-    vector<vec4> row1, row2, row3, row4, row5, row6, row7, row8;
+    /*vector<vec4> row1, row2, row3, row4, row5, row6, row7, row8;
 
     // Number 1
     row1 = { BLACK,WHITE,BLACK };
@@ -33,6 +33,5 @@ Clock::Clock() {
     number_2.push(row4)
     number_2.push(row5)
     number_2.push(row6)
-    number_2.push(row7)
-
+    number_2.push(row7)*/
 }
