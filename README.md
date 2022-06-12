@@ -14,7 +14,7 @@
 1. Battleship
 1. Etch-A-Sketch
 1. Balancing Board Game
-1. Wordle
+1. Wordle - from the looks of it, it's gonna be deprecated
 1. 2048
 1. DOOM
 
@@ -34,3 +34,6 @@
 # Network To-Do list
 
 1. Simple Decentralisation
+
+# Notes
+It'd be a good idea to add "Wordscapes", or "Scrumble" into the pool of games
