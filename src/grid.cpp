@@ -8,7 +8,7 @@ Grid::Grid() {
         row_color.push_back(color);
     }
     for (int i=0; i<32; i++) {
-        this->color.push_back(row_color);
+        sprite.push_back(row_color);
     }
 
 
@@ -22,7 +22,7 @@ Grid::Grid() {
 }
 
 void Grid::DrawOnScreen(int& x, int& y, const vec4& color) {
-    this->color.at(x).at(y) = color;
+    sprite.at(x).at(y) = color;
 }
 
 void Grid::update() {
@@ -39,7 +39,7 @@ void Grid::update() {
     
     for (float x=0; x<16; x+=0.5f) {
         for (float y=0; y<16; y+=0.5f) {
-            vec4 m_color = color.at(i).at(j);
+            vec4 m_color = sprite.at(i).at(j);
 
             sprites.push_back(new Sprite(v1+vec3(x, y, 0), v2+vec3(x, y, 0)-vec3(space_offset, 0, 0), v3+vec3(x, y, 0)-vec3(space_offset, space_offset, 0), m_color));
             sprites.push_back(new Sprite(v1+vec3(x, y, 0), v4+vec3(x, y, 0)-vec3(0, space_offset, 0), v3+vec3(x, y, 0)-vec3(space_offset, space_offset, 0), m_color));
@@ -63,7 +63,7 @@ void Grid::Default_State() {
         row_color.push_back(DEFAULT);
     }
     for (int i=0; i<32; i++) {
-        this->color.push_back(row_color);
+        sprite.push_back(row_color);
     }
     
     
@@ -86,7 +86,7 @@ void Grid::Random() {
         row_color.push_back(DEFAULT);
     }
     for (int i=0; i<32; i++) {
-        this->color.push_back(row_color);
+        sprite.push_back(row_color);
     }
 
 

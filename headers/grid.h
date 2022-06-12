@@ -7,6 +7,7 @@
 
 // Dependancies
 #include <vector>
+#include "alpha_numeric.h"
 #include "Renderable2D.h"
 #include "sprite.h"
 
@@ -36,7 +37,7 @@ class Grid {
 private:
 	vector<Renderable2D*> sprites = {};
 
-	vector<vector<vec4>> color;
+	vector<vector<vec4>> sprite;
 	void DrawOnScreen(int& x, int& y, const vec4& color);
 
 

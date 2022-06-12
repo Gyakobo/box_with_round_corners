@@ -29,7 +29,7 @@
 1. Bad Apple Intro
 1. Pixelated NFTs and pictures (Mona Lisa, smth associated with Rick and Morty)
 1. Rick Astley "Never Gonna Give You Up"
-1. Emulate a clock and (Basically emulate this https://www.amazon.com/gp/product/B07H7L1PLD/ref=ox_sc_act_image_1?smid=AMLS2NRKTFGS9&psc=1)
+1. Emulate a clock (Basically emulate this https://www.amazon.com/gp/product/B07H7L1PLD/ref=ox_sc_act_image_1?smid=AMLS2NRKTFGS9&psc=1)
 
 # Network To-Do list
 
