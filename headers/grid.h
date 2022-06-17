@@ -10,6 +10,7 @@
 #include "Renderable2D.h"
 #include "sprite.h"
 
+// Header with alpha-numeric symbols and colors
 #include "alpha_numeric.h"
 
 using namespace std;
@@ -28,7 +29,7 @@ private:
 	vector<Renderable2D*> sprites = {};
 
 	vector<vector<vec4>> sprite;
-	void DrawOnScreen(int& x, int& y, const vec4& color);
+	void DrawOnScreen(int& x, int& y, const vec4& color); // Draws on screen
 
 
 	/* Future poleomorhic virtual classes 
@@ -41,9 +42,10 @@ private:
 
 public:
 	Grid();
+	void update(); // Updates the screen
 
+	// Basic Animations on the screen
 	void alpha_numeric_test();	
-	void update();
 	void Default_State();
 	void Random();
 

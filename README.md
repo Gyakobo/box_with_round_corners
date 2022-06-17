@@ -1,5 +1,6 @@
 # Arcade Games To-Do list
 
+1. CrossHares
 1. Pong
 1. Snake
 1. Pacman
