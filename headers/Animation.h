@@ -6,10 +6,16 @@
 
 class Animation : public Grid {
 private:
+    vector<Renderable2D*> sprites = {};
+	vector<vector<vec4>> sprite;
+    void DrawOnScreen(int& x, int& y, const vec4& color) {
+            sprite.at(x).at(y) = color;
+    }
+
 
 public:
     Animation();
-    virtual void party_parrot();
+    void party_parrot(int& n);
 };
 
 

@@ -13,10 +13,13 @@ int main() {
 
 	glViewport(0, 0, width, height);
 
-	Grid grid;
-	grid.update();
+	//Grid grid;
+	Animation animation;
+	animation.update();
+	//grid.update();
 	TileLayer layer(&shader);
-	vector<Renderable2D*> sprites = grid.getRenderables();
+	//vector<Renderable2D*> sprites = grid.getRenderables();
+	vector<Renderable2D*> sprites = animation.getRenderables();
 	for (int i=0; i<sprites.size(); i++) layer.add(sprites.at(i));
 
 	float x, y;
@@ -25,6 +28,8 @@ int main() {
 	chrono::steady_clock::time_point end = begin;	
 	
 	double elapsed_secs = 0.0f;
+
+	int anime_index = 0;
 
 	while (!window.closed()) {
 		window.clear();
@@ -38,12 +43,21 @@ int main() {
 		//printf("time = %f\n", elapsed_secs);
 
 		if (elapsed_secs >= 5000.0f) {
-			grid.Default_State();
-			//grid.Random();
-			//grid.alpha_numeric_test();
-			grid.update();
+			//grid.Default_State();
+			/*grid.Random();
+			grid.alpha_numeric_test();*/
+
+			//grid.update();
+		
+			animation.party_parrot(anime_index);
+			animation.update();
+
+			anime_index++;
+			if (anime_index > 9) anime_index = 0;
+
 			layer.clean_slate();
-			vector<Renderable2D*> sprites = grid.getRenderables();
+			//vector<Renderable2D*> sprites = grid.getRenderables();
+			vector<Renderable2D*> sprites = animation.getRenderables();
 			for (int i=0; i<sprites.size(); i++) layer.add(sprites.at(i));
 		
 			begin = chrono::steady_clock::now();
