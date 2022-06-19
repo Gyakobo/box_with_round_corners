@@ -1,6 +1,6 @@
-from email.policy import default
 import numpy as np
 import cv2
+from math import *
 
 '''
 Note that this is RGB, however, cv2 reads in BGR. I know, it's annoying
@@ -8,16 +8,16 @@ Note that this is RGB, however, cv2 reads in BGR. I know, it's annoying
 General Colors
 Beak = (134, 230, 0)
 
-1. (255, 95, 91) n
-2. (255, 196, 82) n
-3. (88, 255, 90) n
-4. (90, 251, 255) n
-5. (88, 156, 255) n
-6. (235, 67, 255) n
-7. (249, 97, 255) n
-8. (235, 67, 255) n
-9. (255, 58, 172) n
-10. (57, 59, 255) n
+1. (255, 95, 91) 
+2. (255, 196, 82) 
+3. (88, 255, 90) 
+4. (90, 251, 255) 
+5. (88, 156, 255) 
+6. (235, 67, 255) 
+7. (249, 97, 255) 
+8. (235, 67, 255) 
+9. (255, 58, 172) 
+10. (57, 59, 255) 
 
 '''
 def BGR_to_RGB(array):
@@ -56,7 +56,7 @@ def pixel(array):
 
         case _:
             return "c0"
-
+'''
 img = cv2.imread('partyParrotsMatrix.bmp', 4)
 
 #print(len(img[0]))
@@ -112,11 +112,33 @@ f.close()
 cv2.imshow('image', img)
 cv2.waitKey(0)
 cv2.destroyAllWindows()
+'''
 
+list = [
+    [255, 95, 91],
+    [255, 196, 82], 
+    [88, 255, 90], 
+    [90, 251, 255], 
+    [88, 156, 255], 
+    [235, 67, 255], 
+    [249, 97, 255], 
+    [235, 67, 255], 
+    [255, 58, 172], 
+    [57, 59, 255] 
+]
 
+def module(list):
+    for i in list:
+        mean = sqrt(i[0]**2 + i[1]**2 + i[2]**2)
+        i[0] /= mean
+        i[1] /= mean
+        i[2] /= mean
+    return list
 
-
-
+list = module(list)
+for i in list:
+    print(i)
+    print('\n')
 
 
 

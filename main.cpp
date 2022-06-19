@@ -29,8 +29,6 @@ int main() {
 	
 	double elapsed_secs = 0.0f;
 
-	int anime_index = 0;
-
 	while (!window.closed()) {
 		window.clear();
 
@@ -42,18 +40,15 @@ int main() {
 
 		//printf("time = %f\n", elapsed_secs);
 
-		if (elapsed_secs >= 96000.0f) {
+		if (elapsed_secs >= 94000.0f) {
 			//grid.Default_State();
 			/*grid.Random();
 			grid.alpha_numeric_test();*/
 
 			//grid.update();
 		
-			animation.party_parrot(anime_index);
+			animation.broken_party_parrot();
 			animation.update();
-
-			anime_index++;
-			if (anime_index > 9) anime_index = 0;
 
 			layer.clean_slate();
 			//vector<Renderable2D*> sprites = grid.getRenderables();
