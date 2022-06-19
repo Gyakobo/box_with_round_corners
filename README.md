@@ -21,7 +21,7 @@
 
 # Animation To-Do list
 
-1. Party Parrot
+1. ~~Party Parrot~~
 1. Teardrop Animation (Image of Initialisation)
 1. Fire Animation
 1. Sound Amplifier 
