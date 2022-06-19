@@ -4,7 +4,7 @@
 // Dependencies
 #include "../../headers/grid.h"
 
-class Pong : Grid {
+class Pong : public Grid {
 private:
     int y_coordinate;
     vec2 ball_speed;

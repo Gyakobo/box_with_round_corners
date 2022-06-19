@@ -1,6 +1,6 @@
 #include "../headers/pong.h"
 
-void Pong::Pong() {
+Pong::Pong() {
 
 }
 

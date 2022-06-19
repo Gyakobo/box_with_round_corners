@@ -1,11 +1,11 @@
-#ifndef CROSSHARE_H
-#define CROSSHARE_H
+#ifndef CROSSHARES_H
+#define CROSSHARES_H
 
-class CrossHare {
+class CrossHares {
 private:
 
 public:
-    CrossHare();
+    CrossHares();
 };
 
 #endif
