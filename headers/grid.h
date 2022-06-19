@@ -2,13 +2,13 @@
 #define GRID_H
 
 // Essentials
-#include <stdio.h>
-#include <math.h>
+//#include <stdio.h>
+//#include <math.h>
 
 // Dependancies
-#include <vector>
-#include "Renderable2D.h"
-#include "sprite.h"
+//#include <vector>
+//#include "Renderable2D.h"
+//#include "sprite.h"
 
 // Header with alpha-numeric symbols and colors
 #include "alpha_numeric.h"

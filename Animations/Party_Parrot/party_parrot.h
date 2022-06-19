@@ -1,6 +1,23 @@
 #ifndef PARTY_PARROT_H
 #define PARTY_PARROT_H
 
+typedef bitset<2> byte;
+
+// Essentials
+#include <stdio.h>
+#include <math.h>
+#include <map>
+#include <string>
+
+// Dependancies
+#include <vector>
+
+#define c0 0b0
+#define c1 0b1
+#define c2 0b0
+
+using namespace std;
+
 const vector<vector<byte>> parrot1 = {
 { c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0 },
 { c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0 },
