@@ -1,17 +1,38 @@
 #include <iostream>
+#include <string>
 
 using namespace std;
 
-int main() {
-	bool var;
-
-	if (var == NULL) {
-		cout << "yes, it's a NULL\n" << endl;
+class Entity {
+private:
+	string c_out = "This is an entity\n";
+public:
+	Entity();
+	void output() {
+		cout << c_out;
 	}
+};
 
-	if (var == 0) {
-		cout << "yes, it's a '0'\n" << endl;
-	} 
+Entity::Entity() {}
+
+class Player: public Entity {
+private:
+
+public:
+	Player();
+};
+
+Player::Player() {}
+
+
+
+int main() {
+	Entity entity;
+	entity.output();
+
+	Player player;
+	player.c_out = "lol";
+	player.output();
 
 	return 0;
 }

@@ -42,7 +42,7 @@ int main() {
 
 		//printf("time = %f\n", elapsed_secs);
 
-		if (elapsed_secs >= 5000.0f) {
+		if (elapsed_secs >= 96000.0f) {
 			//grid.Default_State();
 			/*grid.Random();
 			grid.alpha_numeric_test();*/

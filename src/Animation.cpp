@@ -15,14 +15,21 @@ void Animation::party_parrot(int& n) {
         sprite.push_back(row_color);
     }
 
+    int y_;
+
     for (int x=0; x<32; x++) {
         for (int y=0; y<32; y++) {
             // Beak
-            if(parrot[n][x][y] == c1)
+            y_ = 8*4 - 1 - y;
+            if(parrot[n][y_][x] == c1)
                 color = vec4(134, 230, 0, 1);
-            else if(parrot[n][x][y] == c2)
-                color = vec4(255, 95, 91, 1);
-            else if(parrot[n][x][y] == c0)
+
+            // Parrot Skin
+            if(parrot[n][y_][x] == c2)
+                color = parrot_color[n];
+
+            // Dark Background
+            if(parrot[n][y_][x] == c0)
                 color = vec4(0, 0, 0, 1);
 
             DrawOnScreen(x, y, color);
