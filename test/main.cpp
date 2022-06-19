@@ -4,7 +4,7 @@
 using namespace std;
 
 class Entity {
-private:
+protected:
 	string c_out = "This is an entity\n";
 public:
 	Entity();

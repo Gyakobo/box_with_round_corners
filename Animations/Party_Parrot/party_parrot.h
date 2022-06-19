@@ -16,9 +16,9 @@ typedef bitset<2> byte;
 // Dependancies
 #include <vector>
 
-#define c0 0b00
-#define c1 0b01
-#define c2 0b10
+#define c0 0B00
+#define c1 0B01
+#define c2 0B10
 
 using namespace std;
 

@@ -25,7 +25,7 @@ y - is inversed in this graph
 */
 
 class Grid {
-public:
+protected:
 	vector<Renderable2D*> sprites = {};
 
 	vector<vector<vec4>> sprite;
