@@ -4,7 +4,10 @@ using namespace std;
 
 const int width = 1280, height = 720;
 
-int main() {
+#define Default 1
+
+int main()
+{
 	Window window("Box Simulator", width, height);
 
 	Shader shader("shaders/vertex_shader.glsl", "shaders/fragment_shader.glsl", "shaders/geometric_shader.glsl");
@@ -13,48 +16,66 @@ int main() {
 
 	glViewport(0, 0, width, height);
 
-	//Grid grid;
+#if Default
+	Grid grid;
+	grid.update();
+
+	TileLayer layer(&shader);
+	vector<Renderable2D *> sprites = grid.getRenderables();
+
+#else
 	Animation animation;
 	animation.update();
-	//grid.update();
+
 	TileLayer layer(&shader);
-	//vector<Renderable2D*> sprites = grid.getRenderables();
-	vector<Renderable2D*> sprites = animation.getRenderables();
-	for (int i=0; i<sprites.size(); i++) layer.add(sprites.at(i));
+	vector<Renderable2D *> sprites = animation.getRenderables();
+
+#endif
+
+	for (int i = 0; i < sprites.size(); i++)
+		layer.add(sprites.at(i));
 
 	float x, y;
-	
-	chrono::steady_clock::time_point begin = chrono::steady_clock::now();	
-	chrono::steady_clock::time_point end = begin;	
-	
+
+	chrono::steady_clock::time_point begin = chrono::steady_clock::now();
+	chrono::steady_clock::time_point end = begin;
+
 	double elapsed_secs = 0.0f;
 
-	while (!window.closed()) {
+	while (!window.closed())
+	{
 		window.clear();
 
-		if (window.isKeyPressed(GLFW_KEY_ESCAPE)) break;
+		if (window.isKeyPressed(GLFW_KEY_ESCAPE))
+			break;
 
-		//clear();
-		//printf("x = %f, y = %f\n", x, y);
+		// clear();
+		// printf("x = %f, y = %f\n", x, y);
 
+		// printf("time = %f\n", elapsed_secs);
 
-		//printf("time = %f\n", elapsed_secs);
+		if (elapsed_secs >= 94000.0f)
+		{
 
-		if (elapsed_secs >= 94000.0f) {
-			//grid.Default_State();
-			/*grid.Random();
-			grid.alpha_numeric_test();*/
+#if Default
+			// grid.Default_State();
+			// grid.Random();
+			grid.alpha_numeric_test();
+			grid.update();
 
-			//grid.update();
-		
+			layer.clean_slate();
+			vector<Renderable2D *> sprites = grid.getRenderables();
+#else
 			animation.party_parrot();
 			animation.update();
 
 			layer.clean_slate();
-			//vector<Renderable2D*> sprites = grid.getRenderables();
-			vector<Renderable2D*> sprites = animation.getRenderables();
-			for (int i=0; i<sprites.size(); i++) layer.add(sprites.at(i));
-		
+			vector<Renderable2D *> sprites = animation.getRenderables();
+#endif
+
+			for (int i = 0; i < sprites.size(); i++)
+				layer.add(sprites.at(i));
+
 			begin = chrono::steady_clock::now();
 		}
 
@@ -63,18 +84,13 @@ int main() {
 		end = chrono::steady_clock::now();
 		elapsed_secs = chrono::duration_cast<chrono::microseconds>(end - begin).count() * 1.0f;
 
-	
 		window.getMousePosition(x, y);
 
 		shader.enable();
 		layer.render();
-		
-		window.update();
 
-	}	
+		window.update();
+	}
 
 	return 0;
 }
-
-
-
