@@ -5,6 +5,7 @@
 1. Snake
 1. Pacman
 1. Tetris
+1. Sudoku
 1. Minesweeper
 1. Atari Breakout
 1. Space Invaders/ Galaga
@@ -19,6 +20,13 @@
 1. 2048
 1. DOOM
 
+# Default Applications
+
+1. Notification service(Mail, Tweet, Youtube, Whatsapp)
+1. Emulate a clock (Basically emulate this https://www.amazon.com/gp/product/B07H7L1PLD/ref=ox_sc_act_image_1?smid=AMLS2NRKTFGS9&psc=1)
+
+1. > When stacked into **4x1 mode**, emulate time with a waving flag
+
 # Animation To-Do list
 
 1. ~~Party Parrot~~
@@ -31,11 +39,12 @@
 1. Bad Apple Intro
 1. Pixelated NFTs and pictures (Mona Lisa, smth associated with Rick and Morty)
 1. Rick Astley "Never Gonna Give You Up"
-1. Emulate a clock (Basically emulate this https://www.amazon.com/gp/product/B07H7L1PLD/ref=ox_sc_act_image_1?smid=AMLS2NRKTFGS9&psc=1)
 
-# Network To-Do list
+# Hardware To-Do list
 
-1. Simple Decentralisation
+1. Simple Decentralisation Networking
+1. Could add a wireless charger to the kit and top of it a **teardrop** animation
+1. Also need to find out how set up a touch screen on top of the LED panel
 
 # Notes
-It'd be a good idea to add "Wordscapes", or "Scrumble" into the pool of games
+* It'd be a good idea to add "Wordscapes", or "Scrumble" into the pool of games

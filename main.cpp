@@ -47,7 +47,7 @@ int main() {
 
 			//grid.update();
 		
-			animation.broken_party_parrot();
+			animation.party_parrot();
 			animation.update();
 
 			layer.clean_slate();
