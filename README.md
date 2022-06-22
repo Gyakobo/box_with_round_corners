@@ -5,7 +5,7 @@
 1. Snake
 1. Pacman
 1. Tetris
-1. Sudoku
+1. **Sudoku**
 1. Minesweeper
 1. Atari Breakout
 1. Space Invaders/ Galaga
@@ -32,7 +32,7 @@
 1. ~~Party Parrot~~
 1. Teardrop Animation (Image of Initialisation)
 1. Fire Animation
-1. Sound Amplifier 
+1. Sound Amplifier
 1. Adafruit Matrix Portal (Basically your fluid simulator) https://www.adafruit.com/product/4745
 1. Party Parrot, Mario juming, Sonic Running
 1. "Game of Life" by John Conway
@@ -47,4 +47,5 @@
 1. Also need to find out how set up a touch screen on top of the LED panel
 
 # Notes
-* It'd be a good idea to add "Wordscapes", or "Scrumble" into the pool of games
+
+- It'd be a good idea to add "Wordscapes", or "Scrumble" into the pool of games
