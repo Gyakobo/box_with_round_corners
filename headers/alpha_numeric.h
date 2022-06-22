@@ -316,6 +316,71 @@ const vector<vector<bool>> small_number_8 = {{WHITE_, WHITE_, WHITE_}, {WHITE_, 
 // Small Number 9
 const vector<vector<bool>> small_number_9 = {{WHITE_, WHITE_, WHITE_}, {WHITE_, WHITE_, WHITE_}, {BLACK_, BLACK_, WHITE_}, {WHITE_, WHITE_, WHITE_}};
 
+
+// Sudoku number 0
+const vector<vector<bool>> su_number_0 = {
+    {WHITE_, WHITE_, WHITE_},
+    {WHITE_, BLACK_, WHITE_},
+    {WHITE_, WHITE_, WHITE_}};
+// Sudoku number 1
+const vector<vector<bool>> su_number_1 = {
+    {WHITE_},
+    {WHITE_},
+    {WHITE_}};
+// Sudoku number 2 
+const vector<vector<bool>> su_number_2 = {
+    {WHITE_, WHITE_, BLACK_},
+    {BLACK_, WHITE_, BLACK_},
+    {BLACK_, WHITE_, WHITE_}};
+// Sudoku number 3 
+const vector<vector<bool>> su_number_3= {
+    {WHITE_, WHITE_, WHITE_},
+    {BLACK_, WHITE_, WHITE_},
+    {WHITE_, WHITE_, WHITE_}};
+// Sudoku number 4 
+const vector<vector<bool>> su_number_4= {
+    {WHITE_, BLACK_, WHITE_},
+    {WHITE_, WHITE_, WHITE_},
+    {BLACK_, BLACK_, WHITE_}};
+// Sudoku number 5 
+const vector<vector<bool>> su_number_5= {
+    {BLACK_, WHITE_, WHITE_},
+    {BLACK_, WHITE_, BLACK_},
+    {WHITE_, WHITE_, BLACK_}};
+// Sudoku number 6 
+const vector<vector<bool>> su_number_6= {
+    {WHITE_, BLACK_},
+    {WHITE_, WHITE_},
+    {WHITE_, WHITE_}};
+// Sudoku number 7 
+const vector<vector<bool>> su_number_7= {
+    {WHITE_, WHITE_, WHITE_},
+    {BLACK_, BLACK_, WHITE_},
+    {BLACK_, BLACK_, WHITE_}};
+// Sudoku number 8 
+const vector<vector<bool>> su_number_8= {
+    {WHITE_, WHITE_, WHITE_},
+    {WHITE_, WHITE_, WHITE_},
+    {WHITE_, WHITE_, WHITE_}};
+// Sudoku number 9 
+const vector<vector<bool>> su_number_9= {
+    {WHITE_, WHITE_},
+    {WHITE_, WHITE_},
+    {BLACK_, WHITE_}};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // Number 0
 const vector<vector<bool>> number_0 = {
     {BLACK_, WHITE_, WHITE_, BLACK_},
@@ -452,6 +517,7 @@ const map<char, vector<vector<bool>>> dict_letter = {
 const vector<vector<vector<bool>>> letter = {letter_A, letter_B, letter_C, letter_D, letter_E, letter_F, letter_G, letter_H, letter_I, letter_J, letter_K, letter_L, letter_M, letter_N, letter_O, letter_P, letter_Q, letter_R, letter_S, letter_T, letter_U, letter_V, letter_W, letter_X, letter_Y, letter_Z};
 
 // Number Array
+const vector<vector<vector<bool>>> su_number = {su_number_0, su_number_1, su_number_2, su_number_3, su_number_4, su_number_5, su_number_6, su_number_7, su_number_8, su_number_9};
 const vector<vector<vector<bool>>> number = {number_0, number_1, number_2, number_3, number_4, number_5, number_6, number_7, number_8, number_9};
 const vector<vector<vector<bool>>> small_number = {small_number_0, small_number_1, small_number_2, small_number_3, small_number_4, small_number_5, small_number_6, small_number_7, small_number_8, small_number_9};
 

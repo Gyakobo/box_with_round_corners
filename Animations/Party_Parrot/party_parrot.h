@@ -9,9 +9,8 @@
 #include <stdio.h>
 #include <math.h>
 #include <map>
-#include <string>
 
-typedef bitset<2> byte;
+typedef bitset<2> two_bits;
 
 // Dependancies
 #include <vector>
@@ -372,6 +371,6 @@ const vector<vector<byte>> parrot10 = {
 { c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0,c0 }
 };
 
-const vector<vector<vector<byte>>> parrot = { parrot1, parrot2, parrot3, parrot4, parrot5, parrot6, parrot7, parrot8, parrot9, parrot10 };
+const vector<vector<vector<two_bits>>> parrot = { parrot1, parrot2, parrot3, parrot4, parrot5, parrot6, parrot7, parrot8, parrot9, parrot10 };
 
 #endif

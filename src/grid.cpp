@@ -66,14 +66,14 @@ void Grid::Default_State()
     vec4 color;
     double alpha = 1.0f;
 
-    for (int i = 0; i < 32; i++)
+    /*for (int i = 0; i < 32; i++)
     {
         row_color.push_back(DEFAULT);
     }
     for (int i = 0; i < 32; i++)
     {
         sprite.push_back(row_color);
-    }
+    }*/
 
     for (int x = 0; x < 32; x++)
     {
@@ -91,14 +91,14 @@ void Grid::alpha_numeric_test()
     vector<vec4> row_color;
     vec4 color;
 
-    for (int i = 0; i < 32; i++)
+    /*for (int i = 0; i < 32; i++)
     {
         row_color.push_back(DEFAULT);
     }
     for (int i = 0; i < 32; i++)
     {
         sprite.push_back(row_color);
-    }
+    }*/
 
     int y_ = 0;
     int x_ = 0;
@@ -125,25 +125,29 @@ void Grid::alpha_numeric_test()
 
     for (int character = 0; character < 9; character++)
     {
-        for (int x = 0; x < small_number[character].at(0).size(); x++)
+        for (int x = 0; x < su_number[character].at(0).size(); x++)
         {
-            for (int y = 0; y < 4; y++)
+            for (int y = 0; y < 3; y++)
             {
                 y_ = 8 * 4 - 1 - y;
 
-                x_ = x + numb_width;
-                // x_ = x + character * 5;
+                // x_ = x + numb_width;
+                x_ = x + character * 4;
 
-                if (small_number.at(character).at(y).at(x) && change_color)
+                if (su_number.at(character).at(y).at(x) && change_color)
                     DrawOnScreen(x_, y_, WHITE);
-
-                else if (small_number.at(character).at(y).at(x) && !change_color)
+                else if (su_number.at(character).at(y).at(x) && !change_color)
                     DrawOnScreen(x_, y_, RED);
                 else
                     DrawOnScreen(x_, y_, BLACK);
             }
         }
-        numb_width += small_number[character].at(0).size() + 1;
+        if (character == 2 || character == 5)
+            numb_width += su_number[character].at(0).size() + 3;
+        else 
+            numb_width += su_number[character].at(0).size() + 0;
+        
+        // numb_width += su_number[character].at(0).size() + 0;
         change_color = !change_color;
     }
 }
@@ -155,14 +159,14 @@ void Grid::Random()
     vector<vec4> row_color;
     vec4 color;
 
-    for (int i = 0; i < 32; i++)
+    /*for (int i = 0; i < 32; i++)
     {
         row_color.push_back(DEFAULT);
     }
     for (int i = 0; i < 32; i++)
     {
         sprite.push_back(row_color);
-    }
+    }*/
 
     for (int x = 0; x < 32; x++)
     {

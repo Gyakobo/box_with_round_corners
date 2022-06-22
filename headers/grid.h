@@ -31,15 +31,6 @@ protected:
 	vector<vector<vec4>> sprite;
 	void DrawOnScreen(int& x, int& y, const vec4& color); // Draws on screen
 
-
-	/* Future poleomorhic virtual classes 
-	void Pong();
-	void Snake();
-	void Tetris();
-	void Space_Invaders();
-	void Pixelated_Image();
-	*/
-
 public:
 	Grid();
 	void update(); // Updates the screen
