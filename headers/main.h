@@ -42,5 +42,6 @@
 // Grid 
 #include "grid.h"
 #include "Animation.h"
+#include "../arcade_games/headers/sudoku.h"
 
 #endif

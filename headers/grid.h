@@ -11,6 +11,8 @@
 //#include "sprite.h"
 
 // Header with alpha-numeric symbols and colors
+//#include "utils/utils.h"
+
 #include "alpha_numeric.h"
 
 using namespace std;
@@ -27,7 +29,6 @@ y - is inversed in this graph
 class Grid {
 protected:
 	vector<Renderable2D*> sprites = {};
-
 	vector<vector<vec4>> sprite;
 	void DrawOnScreen(int& x, int& y, const vec4& color); // Draws on screen
 
@@ -44,6 +45,9 @@ public:
 	vector<Renderable2D*> getRenderables() { return sprites; }
 };
 
-void randomize();
+namespace grid {
+	void randomize();
+	int rand_range(int start, int end);
+}
 
 #endif

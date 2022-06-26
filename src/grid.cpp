@@ -28,6 +28,7 @@ void Grid::DrawOnScreen(int &x, int &y, const vec4 &color)
     sprite.at(x).at(y) = color;
 }
 
+
 void Grid::update()
 {
     sprites = {};
@@ -56,24 +57,16 @@ void Grid::update()
         i++;
         j = 0;
     }
+
 }
 
 void Grid::Default_State()
 {
-    randomize();
+    grid::randomize();
 
-    vector<vec4> row_color;
+    //vector<vec4> row_color;
     vec4 color;
     double alpha = 1.0f;
-
-    /*for (int i = 0; i < 32; i++)
-    {
-        row_color.push_back(DEFAULT);
-    }
-    for (int i = 0; i < 32; i++)
-    {
-        sprite.push_back(row_color);
-    }*/
 
     for (int x = 0; x < 32; x++)
     {
@@ -88,39 +81,15 @@ void Grid::Default_State()
 
 void Grid::alpha_numeric_test()
 {
-    vector<vec4> row_color;
+    //vector<vec4> row_color;
     vec4 color;
-
-    /*for (int i = 0; i < 32; i++)
-    {
-        row_color.push_back(DEFAULT);
-    }
-    for (int i = 0; i < 32; i++)
-    {
-        sprite.push_back(row_color);
-    }*/
 
     int y_ = 0;
     int x_ = 0;
 
     int next_numbers = 0;
 
-    /*for (int y_increment=0; y_increment<9; y_increment+=8) {
-        for (int numb=0; numb<6; numb++) {
-            for (int x=0; x<4; x++) {
-                for (int y=0; y<7; y++) {
-                    color = RANDOM_COLOR;
-                    y_ = 8*4 - 1 - (y+y_increment);
-                    x_ = x + numb*5;
-                    if (numb+next_numbers < 10)
-                        DrawOnScreen(x_, y_, letter.at(numb+next_numbers).at(y).at(x));
-                }
-            }
-        }
-        next_numbers += 6;
-    }*/
-
-    unsigned short int numb_width = 0;
+    short int numb_width = 0;
     bool change_color = true;
 
     for (int character = 0; character < 9; character++)
@@ -131,8 +100,8 @@ void Grid::alpha_numeric_test()
             {
                 y_ = 8 * 4 - 1 - y;
 
-                // x_ = x + numb_width;
-                x_ = x + character * 4;
+                x_ = x + numb_width;
+                // x_ = x + character * 4;
 
                 if (su_number.at(character).at(y).at(x) && change_color)
                     DrawOnScreen(x_, y_, WHITE);
@@ -154,19 +123,10 @@ void Grid::alpha_numeric_test()
 
 void Grid::Random()
 {
-    randomize();
+    grid::randomize();
 
-    vector<vec4> row_color;
+    //vector<vec4> row_color;
     vec4 color;
-
-    /*for (int i = 0; i < 32; i++)
-    {
-        row_color.push_back(DEFAULT);
-    }
-    for (int i = 0; i < 32; i++)
-    {
-        sprite.push_back(row_color);
-    }*/
 
     for (int x = 0; x < 32; x++)
     {
@@ -176,13 +136,20 @@ void Grid::Random()
             DrawOnScreen(x, y, color);
         }
     }
+
 }
 
-void randomize()
-{
-    uint32_t seed = 0;
-    FILE *devrnd = fopen("/dev/random", "r");
-    fread(&seed, 4, 1, devrnd);
-    fclose(devrnd);
-    srand(seed);
+namespace grid { 
+    void randomize() {
+		uint32_t seed = 0;
+		FILE *devrnd = fopen("/dev/random", "r");
+		fread(&seed, 4, 1, devrnd);
+		fclose(devrnd);
+		srand(seed);
+    }
+
+    int rand_range(int start, int end) {
+        int range = end - start + 1;
+        return (rand() % range) + start;
+    }
 }

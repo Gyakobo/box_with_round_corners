@@ -4,7 +4,11 @@ using namespace std;
 
 const int width = 1280, height = 720;
 
-#define Default 1
+#define _DEFAULT 	0
+#define ANIMATION	1
+#define SUDOKU		2
+
+#define STATE SUDOKU 
 
 int main()
 {
@@ -16,20 +20,26 @@ int main()
 
 	glViewport(0, 0, width, height);
 
-#if Default
+	TileLayer layer(&shader);
+
+#if STATE == _DEFAULT 
 	Grid grid;
 	grid.update();
 
-	TileLayer layer(&shader);
 	vector<Renderable2D *> sprites = grid.getRenderables();
 
-#else
+#elif STATE == ANIMATION
 	Animation animation;
 	animation.update();
 
-	TileLayer layer(&shader);
 	vector<Renderable2D *> sprites = animation.getRenderables();
 
+#elif STATE == SUDOKU
+	Sudoku sudoku;
+	sudoku.shrinking_square();
+	sudoku.update();
+
+	vector<Renderable2D *> sprites = sudoku.getRenderables();
 #endif
 
 	for (int i = 0; i < sprites.size(); i++)
@@ -57,7 +67,7 @@ int main()
 		if (elapsed_secs >= 94000.0f)
 		{
 
-#if Default
+#if STATE == _DEFAULT 
 			// grid.Default_State();
 			// grid.Random();
 			grid.alpha_numeric_test();
@@ -65,12 +75,21 @@ int main()
 
 			layer.clean_slate();
 			vector<Renderable2D *> sprites = grid.getRenderables();
-#else
+
+#elif STATE == ANIMATION
 			animation.party_parrot();
 			animation.update();
 
 			layer.clean_slate();
 			vector<Renderable2D *> sprites = animation.getRenderables();
+
+#elif STATE == SUDOKU
+			sudoku.set_problem();
+			sudoku.update();
+			
+			layer.clean_slate();
+			vector<Renderable2D *> sprites = sudoku.getRenderables();
+	
 #endif
 
 			for (int i = 0; i < sprites.size(); i++)

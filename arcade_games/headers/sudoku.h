@@ -8,6 +8,17 @@
 #include <stdio.h>
 #include <math.h>
 #include <map>
+#include <vector>
+
+#include <ctime>
+
+// Import utils library
+//#include "../../headers/utils/utils.h"
+
+// Base Class
+#include "../../headers/grid.h"
+
+using namespace std;
 
 #define num_null 0B0000
 #define num_1 0B0001
@@ -26,17 +37,17 @@
 #define Expert 	0B0011
 #define Evil 	0B0100
 
-typedef biset<4> four_bits; 
+typedef bitset<4> four_bits; 
 
 class Sudoku : public Grid {
 private:
 	vector<vector<four_bits>> sudoku_grid;	
-	vector<four_bits> flat_grid;
+	vector<int> flat_grid;
 
 public:
 	Sudoku();
 	void shrinking_square();
-	void set_problem(four_bits mode);
+	void set_problem();
 };
 
 #endif

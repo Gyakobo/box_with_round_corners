@@ -1,5 +1,6 @@
 #include <iostream>
 #include <string>
+#include <stdio.h>
 
 using namespace std;
 
@@ -31,14 +32,23 @@ void PrintName(Entity* entity) {
 }
 
 int main() {
-	Entity* entity = new Entity();
-	PrintName(entity);
+	srand(time(NULL));
 
-	Player* player = new Player();
-	PrintName(player);
+	int num_array[10];
+	int visited[10];
+	int count = 0;
 
-	//entity = player;
-	//entity.output();
+	while (count < 10) {
+		int num = rand() % 10;
+
+		if (visited[num] == 0) {
+			visited[num] = 1;
+			num_array[count++] = num; 
+		}
+	}
+	
+	for (int i=0; i<10; i++)
+		cout << num_array[i] << '\n';
 
 	return 0;
 }
