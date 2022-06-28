@@ -43,5 +43,6 @@
 #include "grid.h"
 #include "Animation.h"
 #include "../arcade_games/headers/sudoku.h"
+#include "../arcade_games/headers/snake.h"
 
 #endif

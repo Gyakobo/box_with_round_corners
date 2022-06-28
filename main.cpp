@@ -7,8 +7,9 @@ const int width = 1280, height = 720;
 #define _DEFAULT 	0
 #define ANIMATION	1
 #define SUDOKU		2
+#define SNAKE		3
 
-#define STATE SUDOKU 
+#define STATE SNAKE 
 
 int main()
 {
@@ -36,10 +37,17 @@ int main()
 
 #elif STATE == SUDOKU
 	Sudoku sudoku;
-	sudoku.shrinking_square();
+	//sudoku.shrinking_square(); // Doesn't really work
 	sudoku.update();
 
 	vector<Renderable2D *> sprites = sudoku.getRenderables();
+
+#elif STATE == SNAKE
+	Snake snake;
+	snake.Setup();
+	snake.update();	
+
+	vector<Renderable2D *> sprites = snake.getRenderables();
 #endif
 
 	for (int i = 0; i < sprites.size(); i++)
@@ -89,7 +97,21 @@ int main()
 			
 			layer.clean_slate();
 			vector<Renderable2D *> sprites = sudoku.getRenderables();
-	
+
+#elif STATE == SNAKE
+			if (window.isKeyPressed(GLFW_KEY_W)) snake.w_key_pressed;
+			if (window.isKeyPressed(GLFW_KEY_A)) snake.a_key_pressed;
+			if (window.isKeyPressed(GLFW_KEY_S)) snake.s_key_pressed;
+			if (window.isKeyPressed(GLFW_KEY_D)) snake.d_key_pressed;
+
+			snake.update();
+			snake.Draw();
+			snake.Input();
+			snake.Logic();
+
+			layer.clean_slate();
+			vector<Renderable2D *> sprites = snake.getRenderables();
+
 #endif
 
 			for (int i = 0; i < sprites.size(); i++)
