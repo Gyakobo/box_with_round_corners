@@ -99,13 +99,13 @@ int main()
 			vector<Renderable2D *> sprites = sudoku.getRenderables();
 
 #elif STATE == SNAKE
-			if (window.isKeyPressed(GLFW_KEY_W)) snake.w_key_pressed;
-			if (window.isKeyPressed(GLFW_KEY_A)) snake.a_key_pressed;
-			if (window.isKeyPressed(GLFW_KEY_S)) snake.s_key_pressed;
-			if (window.isKeyPressed(GLFW_KEY_D)) snake.d_key_pressed;
+			if (window.isKeyPressed(GLFW_KEY_W)) snake.w_key_pressed();
+			if (window.isKeyPressed(GLFW_KEY_A)) snake.a_key_pressed();
+			if (window.isKeyPressed(GLFW_KEY_S)) snake.s_key_pressed();
+			if (window.isKeyPressed(GLFW_KEY_D)) snake.d_key_pressed();
 
-			snake.update();
 			snake.Draw();
+			snake.update();
 			snake.Input();
 			snake.Logic();
 

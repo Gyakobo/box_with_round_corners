@@ -17,6 +17,8 @@ private:
     int x, y, fruitX, fruitY, score;
     int width = 32, height = 32;
 
+    int tailX[100], tailY[100], nTail=0;
+
     enum eDirection { STOP=0, UP, DOWN, LEFT, RIGHT };
     eDirection dir;
 
@@ -37,10 +39,10 @@ public:
     void Input();
     void Logic();
 
-    void w_key_pressed() w_key = true;
-    void a_key_pressed() a_key = true;
-    void s_key_pressed() s_key = true;
-    void d_key_pressed() d_key = true;
+    void w_key_pressed() { w_key = true; }
+    void a_key_pressed() { a_key = true; }
+    void s_key_pressed() { s_key = true; } 
+    void d_key_pressed() { d_key = true; }
 
 };
 
