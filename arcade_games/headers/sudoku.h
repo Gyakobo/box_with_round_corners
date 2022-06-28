@@ -52,14 +52,14 @@ public:
 
 namespace sudoku {
 
-	#define boxOrigin 0
-	#define rowOrigin 0
-	#define colOrigin 0
+	// #define boxOrigin 0
+	// #define rowOrigin 0
+	// #define colOrigin 0
 
 	// per box formula, basically needed for the shuffling of numbers in the grid
 	// this formula goes through each box instead of the natural order
 	// ((i / 3) % 3) * 9 + ((i % 27) / 9) * 3 + (i / 27) * 27 + (i %3)
-	int formula(int i) {
+	/*int formula(int i) {
 		return ((i / 3) % 3) * 9 + ((i % 27) / 9) * 3 + (i / 27) * 27 + (i %3);
 	}
 
@@ -114,7 +114,7 @@ namespace sudoku {
 	// col step formula
 	int col__step_formula(int i) {
 		return colOrigin + i*9;
-	}
+	}*/
 
 }
 

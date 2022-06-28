@@ -32,23 +32,15 @@ void PrintName(Entity* entity) {
 }
 
 int main() {
-	srand(time(NULL));
+	TEST:	
+	cout << "Start all over\n";
 
-	int num_array[10];
-	int visited[10];
-	int count = 0;
-
-	while (count < 10) {
-		int num = rand() % 10;
-
-		if (visited[num] == 0) {
-			visited[num] = 1;
-			num_array[count++] = num; 
-		}
+	for (int i=0; i<10; i++) {
+		if (i == 4) continue TEST;
+		
+		cout << i << "\n";
 	}
-	
-	for (int i=0; i<10; i++)
-		cout << num_array[i] << '\n';
+
 
 	return 0;
 }
