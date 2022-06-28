@@ -15,6 +15,7 @@ Snake::Snake() {
 
 void Snake::Draw() {
     if (gameOver) {
+
         vec4 blank     =    vec4(0, 0, 0, 1);
         vec4 red_color =    vec4(1, 0, 0, 1); 
         vec4 white_color =  vec4(1, 1, 1, 1);
