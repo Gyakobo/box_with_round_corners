@@ -8,6 +8,7 @@ const int width = 1280, height = 720;
 #define ANIMATION	1
 #define SUDOKU		2
 #define SNAKE		3
+#define PONG		4
 
 #define STATE SNAKE 
 
@@ -48,6 +49,12 @@ int main()
 	snake.update();	
 
 	vector<Renderable2D *> sprites = snake.getRenderables();
+
+#elif STATE == PONG
+	Pong pong;
+	pong.update();
+
+	vector<Renderable2D *> sprites = pong.getRenderables();
 #endif
 
 	for (int i = 0; i < sprites.size(); i++)
@@ -72,8 +79,8 @@ int main()
 
 		// printf("time = %f\n", elapsed_secs);
 
-		if (elapsed_secs >= 94000.0f)
-		{
+		if (elapsed_secs >= 94000.0f) {
+			layer.clean_slate();
 
 #if STATE == _DEFAULT 
 			// grid.Default_State();
@@ -81,21 +88,18 @@ int main()
 			grid.alpha_numeric_test();
 			grid.update();
 
-			layer.clean_slate();
 			vector<Renderable2D *> sprites = grid.getRenderables();
 
 #elif STATE == ANIMATION
 			animation.party_parrot();
 			animation.update();
 
-			layer.clean_slate();
 			vector<Renderable2D *> sprites = animation.getRenderables();
 
 #elif STATE == SUDOKU
 			sudoku.set_problem();
 			sudoku.update();
 			
-			layer.clean_slate();
 			vector<Renderable2D *> sprites = sudoku.getRenderables();
 
 #elif STATE == SNAKE
@@ -109,9 +113,12 @@ int main()
 			snake.Input();
 			snake.Logic();
 
-			layer.clean_slate();
 			vector<Renderable2D *> sprites = snake.getRenderables();
 
+#elif STATE == PONG
+			pong.update();
+
+			vector<Renderable2D *> sprites = sudoku.getRenderables();
 #endif
 
 			for (int i = 0; i < sprites.size(); i++)

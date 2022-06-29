@@ -2,7 +2,7 @@
 
 1. CrossHares
 1. Pong
-1. **Snake**
+1. ~~Snake~~
 1. Pacman
 1. Tetris
 1. ~~Sudoku~~
