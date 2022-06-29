@@ -5,7 +5,7 @@
 1. ~~Snake~~
 1. Pacman
 1. Tetris
-1. ~~Sudoku~~
+1. **Sudoku** (This game is evil)
 1. Minesweeper
 1. Atari Breakout
 1. Space Invaders/ Galaga

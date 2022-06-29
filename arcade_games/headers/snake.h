@@ -39,10 +39,10 @@ public:
     void Input();
     void Logic();
 
-    void w_key_pressed() { w_key = true; }
-    void a_key_pressed() { a_key = true; }
-    void s_key_pressed() { s_key = true; } 
-    void d_key_pressed() { d_key = true; }
+    inline void w_key_pressed() { w_key = true; }
+    inline void a_key_pressed() { a_key = true; }
+    inline void s_key_pressed() { s_key = true; } 
+    inline void d_key_pressed() { d_key = true; }
 
 };
 
