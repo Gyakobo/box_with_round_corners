@@ -10,7 +10,7 @@ const int width = 1280, height = 720;
 #define SNAKE		3
 #define PONG		4
 
-#define STATE SNAKE 
+#define STATE PONG 
 
 int main()
 {
@@ -51,7 +51,7 @@ int main()
 	vector<Renderable2D *> sprites = snake.getRenderables();
 
 #elif STATE == PONG
-	Pong pong;
+	Pong pong(32, 32);
 	pong.update();
 
 	vector<Renderable2D *> sprites = pong.getRenderables();
@@ -116,9 +116,15 @@ int main()
 			vector<Renderable2D *> sprites = snake.getRenderables();
 
 #elif STATE == PONG
+			if (window.isKeyPressed(GLFW_KEY_A)) pong.a_key_pressed();
+			if (window.isKeyPressed(GLFW_KEY_D)) pong.d_key_pressed();
+
+			pong.Draw();
+			pong.Input();
+			pong.Logic();
 			pong.update();
 
-			vector<Renderable2D *> sprites = sudoku.getRenderables();
+			vector<Renderable2D *> sprites = pong.getRenderables();
 #endif
 
 			for (int i = 0; i < sprites.size(); i++)

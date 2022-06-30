@@ -44,5 +44,6 @@
 #include "Animation.h"
 #include "../arcade_games/headers/sudoku.h"
 #include "../arcade_games/headers/snake.h"
+#include "../arcade_games/headers/pong.h"
 
 #endif

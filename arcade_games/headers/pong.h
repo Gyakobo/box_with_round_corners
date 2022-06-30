@@ -91,7 +91,8 @@ public:
         x = y = 0;
     }
 
-    Paddle(int posX, int posY) : Paddle {
+    Paddle(int posX, int posY) : Paddle() 
+    {
         originalX = posX;
         originalY = posY;
         x = posX;
@@ -136,10 +137,19 @@ public:
 
         player1 = new Paddle(1, height/2 - 3);
         player2 = new Paddle(width-2, height/2-3);
+
     }
-    Pong(int width=32, int height=32) : Pong {
+    Pong(int width, int height) : Pong() {
         this->width = width;
         this->height = height;
+
+        vector<vec4> row_color;
+        for (int i=-1; i<32; i++) {
+            row_color.push_back(DEFAULT);
+        }
+        for (int i=-1; i<32; i++) {
+            sprite.push_back(row_color);
+        }
     }
 
     ~Pong() {
@@ -150,13 +160,75 @@ public:
         if (player == player1) 
             score1++;
         else if (player == player2) 
-            score2++
+            score2++;
         ball->Reset();
         player1->Reset();
         player2->Reset();
     }
 
     void Draw();
+
+    void Input() {
+        int ballx = ball->getX();
+        int bally = ball->getY();
+        int player1x = player1->getX();
+        int player1y = player1->getY();
+        int player2x = player2->getX();
+        int player2y = player2->getY();
+
+        if (ball->getDirection() == STOP) ball->randomDirection();
+    }
+
+    void a_key_pressed() {
+        if(player1->getY() > 0) player1->moveUp();
+    }
+    void d_key_pressed() {
+        if(player1->getY() + 4 < height) player1->moveDown();
+    }
+
+    void Logic() {
+        grid::randomize();
+
+        int ballx = ball->getX();
+        int bally = ball->getY();
+        int player1x = player1->getX();
+        int player1y = player1->getY();
+        int player2x = player2->getX();
+        int player2y = player2->getY();
+
+        // left paddle
+        for (int i=0; i<4; i++) 
+            if (ballx == player1x + 1) 
+                if (bally == player1y + i) 
+                    ball->changeDirection((eDir)((rand() % 3) + 4));
+        
+        // right paddle
+        for (int i=0; i<4; i++) 
+            if (ballx == player2x - 1) 
+                if (bally == player2y + i) 
+                    ball->changeDirection((eDir)((rand() % 3) + 1));
+
+        // bottom wall
+        if (bally == height - 1) 
+            ball->changeDirection(ball->getDirection() == DOWNRIGHT ? UPRIGHT : UPLEFT);
+        
+        // top wall
+        if (bally == 0) 
+            ball->changeDirection(ball->getDirection() == UPRIGHT ? DOWNRIGHT : DOWNLEFT);
+        // right wall 
+        if (ballx == width - 1)
+            ScoreUp(player1);
+        // left wall
+        if (ballx == 0)
+            ScoreUp(player2);
+    
+
+    }
 };
 
 #endif
+
+
+
+
+
