@@ -4,6 +4,7 @@ using namespace std;
 
 const int width = 1280, height = 720;
 
+
 #define _DEFAULT 	0
 #define ANIMATION	1
 #define SUDOKU		2
