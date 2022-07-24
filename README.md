@@ -1,8 +1,8 @@
 # Arcade Games To-Do list
 
-1. CrossHares
-1. ~~Pong~~
-1. ~~Snake~~
+1. CrossHares 
+1. ~~Pong~~  (Kinda came as a breeze)
+1. ~~Snake~~ (Simpler than I thought)
 1. Pacman
 1. Tetris
 1. **Sudoku** (This game is evil)
@@ -16,9 +16,9 @@
 1. Battleship
 1. Etch-A-Sketch
 1. Balancing Board Game
-1. Wordle - from the looks of it, it's gonna be deprecated
+1. Wordle (from the looks of it, it's gonna be deprecated)
 1. **2048**
-1. DOOM
+1. DOOM 
 
 # Default Applications
 

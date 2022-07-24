@@ -4,14 +4,23 @@ using namespace std;
 
 const int width = 1280, height = 720;
 
+// Default Settings
+#define _DEFAULT 			0
 
-#define _DEFAULT 	0
-#define ANIMATION	1
-#define SUDOKU		2
-#define SNAKE		3
-#define PONG		4
+// Animations
+#define ANIMATION_PARROT	1
 
-#define STATE PONG 
+// Games
+#define SUDOKU				2 // F this shit
+#define SNAKE				3
+#define PONG				4
+
+
+// Current STATE
+#define STATE ANIMATION_PARROT 
+
+
+
 
 int main()
 {
@@ -31,7 +40,7 @@ int main()
 
 	vector<Renderable2D *> sprites = grid.getRenderables();
 
-#elif STATE == ANIMATION
+#elif STATE == ANIMATION_PARROT
 	Animation animation;
 	animation.update();
 
@@ -91,7 +100,7 @@ int main()
 
 			vector<Renderable2D *> sprites = grid.getRenderables();
 
-#elif STATE == ANIMATION
+#elif STATE == ANIMATION_PARROT
 			animation.party_parrot();
 			animation.update();
 
