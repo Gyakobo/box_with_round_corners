@@ -119,11 +119,10 @@ int main()
 #elif STATE == PONG
 			if (window.isKeyPressed(GLFW_KEY_A)) pong.a_key_pressed();
 			if (window.isKeyPressed(GLFW_KEY_D)) pong.d_key_pressed();
+			if (window.isKeyPressed(GLFW_KEY_J)) pong.j_key_pressed();
+			if (window.isKeyPressed(GLFW_KEY_L)) pong.l_key_pressed();
 
-			pong.Draw();
-			pong.Input();
-			pong.Logic();
-			pong.update();
+			pong.Run();
 
 			vector<Renderable2D *> sprites = pong.getRenderables();
 #endif

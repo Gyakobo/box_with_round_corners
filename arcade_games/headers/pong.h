@@ -45,9 +45,9 @@ public:
         direction = (eDir)((rand() % 6) + 1);
     }
 
-    inline int getX() { return x; }
-    inline int getY() { return y; }
-    inline eDir getDirection() { return direction; }
+    int getX() { return x; }
+    int getY() { return y; }
+    eDir getDirection() { return direction; }
     void Move() {
         switch(direction) {
             case STOP:
@@ -169,6 +169,8 @@ public:
     void Draw();
 
     void Input() {
+        ball->Move();
+
         int ballx = ball->getX();
         int bally = ball->getY();
         int player1x = player1->getX();
@@ -184,6 +186,13 @@ public:
     }
     void d_key_pressed() {
         if(player1->getY() + 4 < height) player1->moveDown();
+    }
+
+    void j_key_pressed() {
+        if(player2->getY() > 0) player2->moveUp();
+    }
+    void l_key_pressed() {
+        if(player2->getY() + 4 < height) player2->moveDown();
     }
 
     void Logic() {
@@ -221,13 +230,17 @@ public:
         // left wall
         if (ballx == 0)
             ScoreUp(player2);
-    
+    }
 
+    void Run() {
+        Draw();
+        Input();
+		Logic();
+		update();
     }
 };
 
 #endif
-
 
 
 

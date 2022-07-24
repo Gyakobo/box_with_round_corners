@@ -1,7 +1,7 @@
 # Arcade Games To-Do list
 
 1. CrossHares
-1. Pong
+1. ~~Pong~~
 1. ~~Snake~~
 1. Pacman
 1. Tetris
@@ -17,7 +17,7 @@
 1. Etch-A-Sketch
 1. Balancing Board Game
 1. Wordle - from the looks of it, it's gonna be deprecated
-1. 2048
+1. **2048**
 1. DOOM
 
 # Default Applications
