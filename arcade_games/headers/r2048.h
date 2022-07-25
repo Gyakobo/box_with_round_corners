@@ -3,12 +3,14 @@
 
 // Dependencies
 #include <iostream>
+#include <cstdlib>
 #include "../../headers/grid.h"
 
 using namespace std;
 
 class R2048: public Grid {
 private:
+    bool flag = true;
 
     int width=4, height=4; 
     int board[4][4];
@@ -18,28 +20,21 @@ private:
 
     grid::eDir direction = grid::STOP;
 
+    void Reset();
+    void applyMove(int _direction);
+    pair<int, int> generateUnoccupiedPosition();
+
 public:
     R2048();
     R2048(int width, int height);
-    void Reset();
 
-    void printUI() {
-        for (int i=0; i<4; ++i) {
-            for (int j=0; j<4; ++j) {
-                if (board[i][j] == 0)
-                    cout << " ";
-                else cout << board[i][j];
-            }
-            cout << "\n";
-        }
-        cout << "Let's start all over\n";
-    }
+    void printUI();
 
-    void q_key_pressed() { Reset(); }
-    void w_key_pressed() { direction = grid::UP; }
-    void a_key_pressed() { direction = grid::LEFT; }
-    void s_key_pressed() { direction = grid::DOWN; }
-    void d_key_pressed() { direction = grid::RIGHT; }
+    void q_key_pressed() { Reset(); flag = true; }
+    void w_key_pressed() { direction = grid::UP; flag = true; }
+    void a_key_pressed() { direction = grid::LEFT; flag = true; }
+    void s_key_pressed() { direction = grid::DOWN; flag = true; }
+    void d_key_pressed() { direction = grid::RIGHT; flag = true; }
 };
 
 

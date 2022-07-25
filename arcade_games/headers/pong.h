@@ -89,14 +89,14 @@ public:
         y = posY;
     }
 
-    inline void Reset() {
+    void Reset() {
         x = originalX; 
         y = originalY; 
     }
-    inline int getX() { return x; }
-    inline int getY() { return y; }
-    inline void moveUp() { y--; }
-    inline void moveDown() { y++; }
+    int getX() { return x; }
+    int getY() { return y; }
+    void moveUp() { y-=2; }
+    void moveDown() { y+=2; }
 };
 
 

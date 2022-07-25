@@ -19,7 +19,7 @@ const int width = 1280, height = 720;
 
 
 // Current STATE
-#define STATE PONG 
+#define STATE _R2048 
 
 
 
@@ -68,8 +68,8 @@ int main()
 
 	vector<Renderable2D *> sprites = pong.getRenderables();
 
-#elif STATE == R2048 
-	R2048 r2048();
+#elif STATE == _R2048 
+	R2048 r2048;
 	r2048.update();
 
 	vector<Renderable2D *> sprites = r2048.getRenderables();
@@ -144,7 +144,7 @@ int main()
 
 			vector<Renderable2D *> sprites = pong.getRenderables();
 
-#elif STATE == R2048
+#elif STATE == _R2048
 			if (window.isKeyPressed(GLFW_KEY_Q)) r2048.q_key_pressed();
 			if (window.isKeyPressed(GLFW_KEY_W)) r2048.w_key_pressed();
 			if (window.isKeyPressed(GLFW_KEY_A)) r2048.a_key_pressed();
@@ -152,6 +152,7 @@ int main()
 			if (window.isKeyPressed(GLFW_KEY_D)) r2048.d_key_pressed();
 
 			r2048.printUI();
+			r2048.update();
 
 			vector<Renderable2D *> sprites = r2048.getRenderables();
 

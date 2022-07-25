@@ -54,13 +54,13 @@ namespace grid {
         
 		LEFT =		1,
         RIGHT =		2,
-		UP =		3,
-		DOWN =		4,
+		UP =		7,
+		DOWN =		8,
 
-		UPLEFT =	5,
-        DOWNLEFT =	6,
-        UPRIGHT =	7,
-        DOWNRIGHT =	8,
+		UPLEFT =	3,
+        DOWNLEFT =	4,
+        UPRIGHT =	5,
+        DOWNRIGHT =	6
 	};
 
 }
