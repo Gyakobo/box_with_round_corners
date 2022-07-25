@@ -5,23 +5,13 @@
 #include "../../headers/grid.h"
 #include <time.h>
 
-enum eDir {
-    STOP=0,
-    LEFT=1,
-    UPLEFT=2,
-    DOWNLEFT=3,
-    RIGHT=4,
-    UPRIGHT=5,
-    DOWNRIGHT=6
-};
-
 
 
 class Ball {
 private:
     int x, y;
     int originalX, originalY;
-    eDir direction;
+    grid::eDir direction;
 public:
     Ball(int posX, int posY) {
         originalX = posX;
@@ -29,48 +19,48 @@ public:
         x = posX;
         y = posY;
 
-        direction = STOP;
+        direction = grid::STOP;
     }
     void Reset() {
         x = originalX;
         y = originalY;
-        direction = STOP;
+        direction = grid::STOP;
     }
-    void changeDirection(eDir _direction) {
+    void changeDirection(grid::eDir _direction) {
         direction = _direction;
     }
 
     void randomDirection() {
         grid::randomize();
-        direction = (eDir)((rand() % 6) + 1);
+        direction = (grid::eDir)((rand() % 6) + 1);
     }
 
     int getX() { return x; }
     int getY() { return y; }
-    eDir getDirection() { return direction; }
+    grid::eDir getDirection() { return direction; }
     void Move() {
         switch(direction) {
-            case STOP:
+            case grid::STOP:
                 break;
-            case LEFT:
+            case grid::LEFT:
                 x--;
                 break;
-            case RIGHT:
+            case grid::RIGHT:
                 x++;
                 break;
-            case UPLEFT:
+            case grid::UPLEFT:
                 x--;
                 y--;
                 break;
-            case DOWNLEFT:
+            case grid::DOWNLEFT:
                 x--;
                 y++;
                 break;
-            case UPRIGHT:
+            case grid::UPRIGHT:
                 x++;
                 y--;
                 break;
-            case DOWNRIGHT:
+            case grid::DOWNRIGHT:
                 x++;
                 y++;
                 break;
@@ -178,7 +168,7 @@ public:
         int player2x = player2->getX();
         int player2y = player2->getY();
 
-        if (ball->getDirection() == STOP) ball->randomDirection();
+        if (ball->getDirection() == grid::STOP) ball->randomDirection();
     }
 
     void a_key_pressed() {
@@ -209,21 +199,21 @@ public:
         for (int i=0; i<4; i++) 
             if (ballx == player1x + 1) 
                 if (bally == player1y + i) 
-                    ball->changeDirection((eDir)((rand() % 3) + 4));
+                    ball->changeDirection((grid::eDir)((rand() % 3) + 4));
         
         // right paddle
         for (int i=0; i<4; i++) 
             if (ballx == player2x - 1) 
                 if (bally == player2y + i) 
-                    ball->changeDirection((eDir)((rand() % 3) + 1));
+                    ball->changeDirection((grid::eDir)((rand() % 3) + 1));
 
         // bottom wall
         if (bally == height - 1) 
-            ball->changeDirection(ball->getDirection() == DOWNRIGHT ? UPRIGHT : UPLEFT);
+            ball->changeDirection(ball->getDirection() == grid::DOWNRIGHT ? grid::UPRIGHT : grid::UPLEFT);
         
         // top wall
         if (bally == 0) 
-            ball->changeDirection(ball->getDirection() == UPRIGHT ? DOWNRIGHT : DOWNLEFT);
+            ball->changeDirection(ball->getDirection() == grid::UPRIGHT ? grid::DOWNRIGHT : grid::DOWNLEFT);
         // right wall 
         if (ballx == width - 1)
             ScoreUp(player1);

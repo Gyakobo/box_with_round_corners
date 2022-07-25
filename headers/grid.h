@@ -48,6 +48,21 @@ public:
 namespace grid {
 	void randomize();
 	int rand_range(int start, int end);
+
+	enum eDir {
+        STOP =		0,
+        
+		LEFT =		1,
+        RIGHT =		2,
+		UP =		3,
+		DOWN =		4,
+
+		UPLEFT =	5,
+        DOWNLEFT =	6,
+        UPRIGHT =	7,
+        DOWNRIGHT =	8,
+	};
+
 }
 
 #endif

@@ -16,7 +16,7 @@
 1. Battleship
 1. Etch-A-Sketch
 1. Balancing Board Game
-1. Wordle (from the looks of it, it's gonna be deprecated)
+1. Wordle (From the looks of it, it's gonna be deprecated)
 1. **2048**
 1. DOOM 
 

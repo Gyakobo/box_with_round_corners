@@ -7,7 +7,6 @@ void Pong::Draw() {
     vec4 blank =        vec4(0, 0, 0, 1);
 
     int WIDTH_MINUS_1 = width-1;
-    //for (int i=0; i<width+2; i++) DrawOnScreen(i, zero, wall_color);
 
     for (int i=0; i<height; i++) {
         for (int j=0; j<width; j++) {
@@ -18,8 +17,6 @@ void Pong::Draw() {
             int player1y = player1->getY();
             int player2x = player2->getX();
             int player2y = player2->getY();
-
-            //if (j == 0) DrawOnScreen(i, j, wall_color);  
 
             if (ballx == j && bally == i) DrawOnScreen(i, j, ball_color);
             else if (player1x == j && player1y == i) DrawOnScreen(i, j, paddle_color);

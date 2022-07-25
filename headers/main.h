@@ -39,11 +39,12 @@
 #include "Layer.h"
 #include "SimplexNoise.h"
 
-// Grid 
+// Box_with_round_corners
 #include "grid.h"
 #include "Animation.h"
 #include "../arcade_games/headers/sudoku.h"
 #include "../arcade_games/headers/snake.h"
 #include "../arcade_games/headers/pong.h"
+#include "../arcade_games/headers/r2048.h"
 
 #endif
