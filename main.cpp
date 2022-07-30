@@ -14,12 +14,12 @@ const int width = 1280, height = 720;
 #define SUDOKU				2 // F this shit
 #define SNAKE				3
 #define PONG				4
-#define R2048				5
+#define _R2048				5
 
 
 
 // Current STATE
-#define STATE _R2048 
+#define STATE ANIMATION_PARROT 
 
 
 
