@@ -19,7 +19,7 @@ const int width = 1280, height = 720;
 
 
 // Current STATE
-#define STATE ANIMATION_PARROT 
+#define STATE _R2048 
 
 
 
