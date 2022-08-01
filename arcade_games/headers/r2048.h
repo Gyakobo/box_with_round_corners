@@ -10,18 +10,17 @@ using namespace std;
 
 class R2048: public Grid {
 private:
-    bool flag = true;
-
     int width=4, height=4; 
     int board[4][4];
 
     int dirLine[4] =     { 1, 0, -1, 0 };
     int dirColumn[4] =   { 0, 1, 0, -1 };
 
-    //int direction = -1;
+    int direction;
+    int previous_direction = -1;
 
     void Reset();
-    void applyMove(int _direction);
+    void applyMove();
     pair<int, int> generateUnoccupiedPosition();
     bool canDoMove(int line, int column, int nextLine, int nextColumn);
     void addPiece();
@@ -32,30 +31,34 @@ public:
 
     void printUI();
 
-    void q_key_pressed() { Reset(); flag = true; }
+    void q_key_pressed() { Reset(); }
 
-    void w_key_pressed() { // UP kinda works
-        //direction = grid::UP; 
-        flag = true; 
-        applyMove(2);
+    void w_key_pressed() { 
+        direction = 2; 
+        applyMove();
+        printUI();
+        //previous_direction = direction;
     }
 
     void a_key_pressed() { 
-        //direction = grid::LEFT; 
-        flag = true; 
-        applyMove(3);
+        direction = 3; 
+        applyMove();
+        printUI();
+        //previous_direction = direction;
     }
     
     void s_key_pressed() {  
-        //direction = grid::DOWN; 
-        flag = true; 
-        applyMove(0);
+        direction = 0; 
+        applyMove();
+        printUI();
+        //previous_direction = direction;
     }
 
-    void d_key_pressed() {  // RIGHT kinda works
-        //direction = grid::RIGHT; 
-        flag = true; 
-        applyMove(1);
+    void d_key_pressed() {  
+        direction = 1; 
+        applyMove();
+        printUI();
+        //previous_direction = direction;
     }
 };
 

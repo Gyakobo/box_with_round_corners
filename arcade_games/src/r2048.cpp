@@ -28,36 +28,41 @@ void R2048::Reset() {
 }
 
 bool R2048::canDoMove(int line, int column, int nextLine, int nextColumn) {
-    if (nextLine < 0 || nextColumn < 0 || nextLine >= 4 || nextColumn >= 4 
+    if (nextLine < 0 || nextColumn < 0 || nextLine >= 4 || nextColumn >= 4
     || (board[line][column] != board[nextLine][nextColumn] && board[nextLine][nextColumn] != 0)) return false;
 
     return true;
 
 }
 
-void R2048::applyMove(int direction) {
-    int startLine = 0, startColumn = 0, lineStep = 1, columnStep = 1;
-    if (direction == 0) { // 0 - down
-        startLine = 3;
-        lineStep = -1;
-    }
-    if (direction == 1) { // 1 - left
-        startColumn = 3;
-        columnStep = -1;
-    }
-    int movePossible = 0;
-    for (int i=startLine; i>=0 && i<4; i+=lineStep) 
-        for (int j=startColumn; j>=0 && j<4; j+=columnStep) {
-            int nextI = i + dirLine[direction], nextJ = j + dirColumn[direction];
-            if(canDoMove(i, j, nextI, nextJ)) {
-                board[nextI][nextJ] += board[i][j];
-                board[i][j] = 0;
-                movePossible = 1;
-            }
+void R2048::applyMove() {
+    if (direction != previous_direction) {
+        int startLine = 0, startColumn = 0, lineStep = 1, columnStep = 1;
+        if (direction == 0) { 
+            startLine = 3;
+            lineStep = -1;
         }
-
-    if (movePossible) {
-        addPiece();
+        if (direction == 1) { 
+            startColumn = 3;
+            columnStep = -1;
+        }
+        int movePossible, canAddPiece = 0;
+ 
+        do {
+            movePossible = 0;
+        
+            for (int i=startLine; i>=0 && i<4; i+=lineStep) 
+                for (int j=startColumn; j>=0 && j<4; j+=columnStep) {
+                    int nextI = i + dirLine[direction], nextJ = j + dirColumn[direction];
+                    if (board[i][j] && canDoMove(i, j, nextI, nextJ)) {
+                        board[nextI][nextJ] += board[i][j];
+                        board[i][j] = 0;
+                        movePossible = canAddPiece = 1;
+                    }
+                }
+        } while (movePossible);
+      
+        if (canAddPiece) addPiece();
     }
 
 }
@@ -75,16 +80,13 @@ pair<int, int> R2048::generateUnoccupiedPosition() {
 }
 
 void R2048::printUI() {
-    if (flag) {
-        system("clear");
-        for (int i=0; i<4; ++i) {
-            for (int j=0; j<4; ++j) 
-                if (board[i][j] == 0) cout << ". ";
-                else cout << board[i][j] << " ";
-            cout << "\n";
-        }
-        flag = false;
-        cout << "q:quit, w:up, s:down, a:left, d:right\n";
+    system("clear");
+    for (int i=0; i<4; ++i) {
+        for (int j=0; j<4; ++j) 
+            if (board[i][j] == 0) cout << ". ";
+            else cout << board[i][j] << " ";
+        cout << "\n";
     }
+    cout << "q:quit, w:up, s:down, a:left, d:right\n";
 }
 
