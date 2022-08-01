@@ -51,8 +51,8 @@ void R2048::applyMove() {
         do {
             movePossible = 0;
         
-            for (int i=startLine; i>=0 && i<4; i+=lineStep) 
-                for (int j=startColumn; j>=0 && j<4; j+=columnStep) {
+            for (int i = startLine; i>=0 && i<4; i+=lineStep) 
+                for (int j = startColumn; j>=0 && j<4; j+=columnStep) {
                     int nextI = i + dirLine[direction], nextJ = j + dirColumn[direction];
                     if (board[i][j] && canDoMove(i, j, nextI, nextJ)) {
                         board[nextI][nextJ] += board[i][j];
@@ -60,6 +60,9 @@ void R2048::applyMove() {
                         movePossible = canAddPiece = 1;
                     }
                 }
+            
+            printUI();
+
         } while (movePossible);
       
         if (canAddPiece) addPiece();
