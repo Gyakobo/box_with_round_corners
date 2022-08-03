@@ -521,6 +521,11 @@ const vector<vector<vector<bool>>> su_number = {su_number_0, su_number_1, su_num
 const vector<vector<vector<bool>>> number = {number_0, number_1, number_2, number_3, number_4, number_5, number_6, number_7, number_8, number_9};
 const vector<vector<vector<bool>>> small_number = {small_number_0, small_number_1, small_number_2, small_number_3, small_number_4, small_number_5, small_number_6, small_number_7, small_number_8, small_number_9};
 
+// su_number    3by3 max
+// number       basic numbers
+// small_number 4by3 max
+
+
 const map<string, vector<vector<vector<bool>>>> alpha_numeric = {
     {"number", number},
     {"letter", letter}};
