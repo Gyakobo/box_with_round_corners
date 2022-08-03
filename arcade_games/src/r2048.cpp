@@ -61,8 +61,8 @@ void R2048::applyMove() {
                     }
                 }
             
-            printUI();
-
+            //printUI();
+            Draw();
         } while (movePossible);
       
         if (canAddPiece) addPiece();
@@ -83,7 +83,7 @@ pair<int, int> R2048::generateUnoccupiedPosition() {
 }
 
 void R2048::printUI() {
-    system("clear");
+    //system("clear");
     for (int i=0; i<4; ++i) {
         for (int j=0; j<4; ++j) 
             if (board[i][j] == 0) cout << ". ";
@@ -92,4 +92,55 @@ void R2048::printUI() {
     }
     cout << "q:quit, w:up, s:down, a:left, d:right\n";
 }
+
+
+void R2048::Draw() {
+    vec4 color;
+
+    int y_ = 0;
+    int x_ = 0;
+
+    int next_numbers = 0;
+
+    int numb_width = 0;
+    bool change_color = true;
+
+
+
+    for (int i = 0; i < 4; ++i) {
+        for (int j = 0; j < 1; ++j) {
+            int current_board_numb = board[i][j];
+ 
+            for (int x = 0; x < number[current_board_numb].at(0).size(); x++) {
+                for (int y = 0; y < number[current_board_numb].size(); y++)
+                {
+
+                    y_ = (8 * 4) - 1 - y + j*number[current_board_numb].size();
+                    x_ = x + numb_width;
+ 
+                    if (number.at(current_board_numb).at(y).at(x) && change_color)
+                        DrawOnScreen(x_, y_, WHITE);
+                    else if (number.at(current_board_numb).at(y).at(x) && !change_color)
+                        DrawOnScreen(x_, y_, RED);
+                    else
+                        DrawOnScreen(x_, y_, BLACK);
+                }
+            }
+            
+            numb_width += number[current_board_numb].at(0).size() + 3;
+            change_color = !change_color;
+       }
+
+       //numb_width = 0;
+    }
+
+
+}
+
+
+
+
+
+
+
 

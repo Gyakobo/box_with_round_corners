@@ -19,7 +19,7 @@ const int width = 1280, height = 720;
 
 
 // Current STATE
-#define STATE _DEFAULT 
+#define STATE _R2048 
 
 
 
@@ -151,7 +151,8 @@ int main()
 			if (window.isKeyPressed(GLFW_KEY_S)) r2048.s_key_pressed();
 			if (window.isKeyPressed(GLFW_KEY_D)) r2048.d_key_pressed();
 
-			r2048.printUI();
+			r2048.printUI(); // Used to be a thing, but now deprecated
+			r2048.Draw();
 			r2048.update();
 
 			vector<Renderable2D *> sprites = r2048.getRenderables();
