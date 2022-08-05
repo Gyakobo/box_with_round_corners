@@ -109,7 +109,7 @@ void R2048::Draw() {
 
     for (int i = 0; i < 4; ++i) {
         for (int j = 0; j < 1; ++j) {
-            int current_board_numb = board[i][j];
+            int current_board_numb = board[j][i];
  
             for (int x = 0; x < number[current_board_numb].at(0).size(); x++) {
                 for (int y = 0; y < number[current_board_numb].size(); y++)
