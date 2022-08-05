@@ -1,27 +1,30 @@
 # Arcade Games To-Do list
 
-Following games need to be done before 1st August to avoid deadlines: Wordle, 2048, Etch-A-Sketch, Tetris, Connect Four, Sudoku, Chess
+Following games need to be done before 1st August to avoid deadlines: Wordle, 2048, Etch-A-Sketch, Tetris, Connect Four, Sudoku, Chess, Minesweeper
 
 1. CrossHares 
-1. ~~Pong~~  (Kinda came as a breeze)
-1. ~~Snake~~ (Simpler than I thought)
+1. <span style="color: green">**Pong**  (Kinda came as a breeze)</span>
+1. <span style="color: green">**Snake** (Simpler than I thought)</span>
 1. Pacman
-1. **Tetris**
-1. **Sudoku** (This game is evil)
-1. Minesweeper
+1. <span style="color: #ed463e">**Tetris**</span>
+1. <span style="color: #ed463e">**Sudoku** (This game is evil)</span>
+1. <span style="color: #ed463e">**Minesweeper**</span>
 1. Atari Breakout
 1. Space Invaders/ Galaga
 1. Chess
-1. **Connect Four**
+1. <span style="color: #ed463e">**Connect Four**</span>
 1. Checkers
-1. **Chess**
+1. <span style="color: #ed463e">**Chess**</span>
 1. Asteroids
 1. Battleship
-1. **Etch-A-Sketch**
+1. <span style="color: #ed463e">**Etch-A-Sketch**</span>
 1. Balancing Board Game
-1. **Wordle** (From the looks of it, it's gonna be deprecated)
-1. **2048**
+1. <span style="color: #ed463e">**Wordle** (From the looks of it, it's gonna be deprecated)</span>
+1. <span style="color: green">**2048** (Way simpler than I thought it'd be)</span>
 1. DOOM 
+1. <span style="color: #ed463e">**"Game of Life" by John Conway**</span>
+
+<span style="color: #ed463e"></span>
 
 # Default Applications
 
@@ -34,11 +37,14 @@ Following games need to be done before 1st August to avoid deadlines: Wordle, 20
 # Animation To-Do list
 
 1. ~~Party Parrot~~
+1. <span style="color: #ed463e">Individual Boot-up Animation</span>
+1. <span style="color: #ed463e">Collective Interconnection Animation(Blue Wave droplet Animation)</span>
+1. <span style="color: #ed463e">Collective Group Ultimate Animation</span>
 1. Teardrop Animation (Image of Initialisation)
 1. Fire Animation
 1. Sound Amplifier
 1. Adafruit Matrix Portal (Basically your fluid simulator) https://www.adafruit.com/product/4745
-1. Party Parrot, Mario juming, Sonic Running
+1. Mario juming, Sonic Running
 1. "Game of Life" by John Conway
 1. Bad Apple Intro
 1. Pixelated NFTs and pictures (Mona Lisa, smth associated with Rick and Morty)
