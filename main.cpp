@@ -11,15 +11,17 @@ const int width = 1280, height = 720;
 #define ANIMATION_PARROT	1
 
 // Games
-#define SUDOKU				2 // F this shit
+#define SUDOKU				2 // Fundle this infernal(hellish)  
 #define SNAKE				3
 #define PONG				4
 #define _R2048				5
+#define GAME_OF_LIFE		6
 
-
+// Example of a square
+#define Object				-1
 
 // Current STATE
-#define STATE _R2048 
+#define STATE GAME_OF_LIFE 
 
 
 
@@ -41,6 +43,11 @@ int main()
 	grid.update();
 
 	vector<Renderable2D *> sprites = grid.getRenderables();
+
+#elif STATE == Object // 6
+	Sample_Object object;
+
+	vector<Renderable2D *> sprites = object.getRenderables();
 
 #elif STATE == ANIMATION_PARROT
 	Animation animation;
@@ -73,6 +80,12 @@ int main()
 	r2048.update();
 
 	vector<Renderable2D *> sprites = r2048.getRenderables();
+
+#elif STATE == GAME_OF_LIFE
+	Game_of_Life conway(32, 32);
+	conway.update();
+
+	vector<Renderable2D *> sprites = conway.getRenderables();
 
 #endif
 
@@ -108,6 +121,11 @@ int main()
 			grid.update();
 
 			vector<Renderable2D *> sprites = grid.getRenderables();
+
+#elif STATE == Object // 6
+			Sample_Object object;
+
+			vector<Renderable2D *> sprites = object.getRenderables();
 
 #elif STATE == ANIMATION_PARROT
 			animation.party_parrot();
@@ -156,6 +174,12 @@ int main()
 			r2048.update();
 
 			vector<Renderable2D *> sprites = r2048.getRenderables();
+
+#elif STATE == GAME_OF_LIFE 
+			conway.Draw();
+			conway.update();
+			
+			vector<Renderable2D *> sprites = conway.getRenderables();
 
 #endif
 

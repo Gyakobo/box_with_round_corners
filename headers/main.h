@@ -46,5 +46,10 @@
 #include "../arcade_games/headers/snake.h"
 #include "../arcade_games/headers/pong.h"
 #include "../arcade_games/headers/r2048.h"
+#include "../arcade_games/headers/game_of_life.h"
+
+
+// Example Object
+#include "Sample_Object.h"
 
 #endif

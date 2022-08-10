@@ -3,8 +3,6 @@
 
 #include "../../headers/grid.h"
 
-//#include <conio.h>
-
 class Snake : public Grid {
 private:
     bool gameOver = false;

@@ -19,10 +19,18 @@ Following games need to be done before 1st August to avoid deadlines: Wordle, 20
 1. Battleship
 1. <span style="color: #ed463e">**Etch-A-Sketch**</span>
 1. Balancing Board Game
+1. Flappy Bird
 1. <span style="color: #ed463e">**Wordle** (From the looks of it, it's gonna be deprecated)</span>
 1. <span style="color: green">**2048** (Way simpler than I thought it'd be)</span>
 1. DOOM 
 1. <span style="color: #ed463e">**"Game of Life" by John Conway**</span>
+1. <span style="color: #ed463e">**Numeric 8 puzzle**</span>
+
+> Special Applications
+1. Logo Designer
+1. Basic Clock Functionality (Would be good to have an alarm clock)
+1. Messanger Notification Notifier (TikTok, Whatsapp, Facebook,Slack)
+1. Temperature Display(Celcius, Fahrenheit)
 
 <span style="color: #ed463e"></span>
 
