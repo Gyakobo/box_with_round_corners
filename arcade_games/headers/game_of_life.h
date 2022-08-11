@@ -15,7 +15,13 @@ private:
 
     vec4 blank =        vec4(0, 0, 0, 1);
     vec4 white_color =  vec4(1, 1, 1, 1);
-    
+
+    /*void left_shif_buffer(bool& buffer_1[32][32], bool& buffer_2[32][32]) {
+        for (int i=0; i<width; i++)
+            for (int j=0; j<height; j++)
+                buffer_1[i][j] = buffer_2[i][j];
+    }*/
+
     bool isAlive(const int x, const int y);
 
 public:

@@ -1,10 +1,10 @@
 #include "../headers/game_of_life.h"
 
 /** Rules of game of life:
- *TODO 1) Any live cell with fewer than two live neighbours dies(as if by underpopulation)
- *TODO 2) Any live cell with two or three live neighbours lives on to the next generation
- *TODO 3) Any live live cell with more than three live neighbours dies, as if by overpopulation
- *TODO 4) Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction
+ *! 1) Any live cell with fewer than two live neighbours dies(as if by underpopulation)
+ *! 2) Any live cell with two or three live neighbours lives on to the next generation
+ *! 3) Any live live cell with more than three live neighbours dies, as if by overpopulation
+ *! 4) Any dead cell with exactly three live neighbours becomes a live cell, as if by reproduction
 */
 
 Game_of_Life::Game_of_Life(const int width, const int height) {
@@ -24,7 +24,7 @@ Game_of_Life::Game_of_Life(const int width, const int height) {
     
     for (int i=0; i<width; i++) {
         for (int j=0; j<height; j++) {
-            if (rand() % 10 == 0) display[i][j] = true; 
+            if (rand() % 4 == 0) display[i][j] = true; 
             else display[i][j] = false;
         }
     }
@@ -101,7 +101,7 @@ void Game_of_Life::Draw() {
 
 
     // Swap buffers
-    //display = swap;
+    // display = swap;
     for (int i=0; i<width; i++)
         for (int j=0; j<height; j++)
             display[i][j] = swap[i][j];

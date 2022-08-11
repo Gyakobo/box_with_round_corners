@@ -23,7 +23,7 @@ Following games need to be done before 1st August to avoid deadlines: Wordle, 20
 1. <span style="color: #ed463e">**Wordle** (From the looks of it, it's gonna be deprecated)</span>
 1. <span style="color: green">**2048** (Way simpler than I thought it'd be)</span>
 1. DOOM 
-1. <span style="color: #ed463e">**"Game of Life" by John Conway**</span>
+1. <span style="color: green">**"Game of Life" by John Conway**</span>
 1. <span style="color: #ed463e">**Numeric 8 puzzle**</span>
 
 > Special Applications
