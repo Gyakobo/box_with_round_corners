@@ -47,6 +47,7 @@
 #include "../arcade_games/headers/pong.h"
 #include "../arcade_games/headers/r2048.h"
 #include "../arcade_games/headers/game_of_life.h"
+#include "../arcade_games/headers/Clock.h"
 
 
 // Example Object

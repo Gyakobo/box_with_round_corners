@@ -11,7 +11,6 @@ Following games need to be done before 1st August to avoid deadlines: Wordle, 20
 1. <span style="color: #ed463e">**Minesweeper**</span>
 1. Atari Breakout
 1. Space Invaders/ Galaga
-1. Chess
 1. <span style="color: #ed463e">**Connect Four**</span>
 1. Checkers
 1. <span style="color: #ed463e">**Chess**</span>
@@ -63,6 +62,7 @@ Following games need to be done before 1st August to avoid deadlines: Wordle, 20
 1. Simple Decentralisation Networking
 1. Could add a wireless charger to the kit and top of it a **teardrop** animation
 1. Also need to find out how set up a touch screen on top of the LED panel
+1. Suggest naming each of the round boxes with the ff names: Edison, Copernicus, Galileo, Michelangelo, Maxwell, Newton, Einstein, da Vinci, Picasso, Kahlo, Van Gogh, Turing, Hamilton, Monet, Mirzakhani, Adam Savage
 
 # Notes
 

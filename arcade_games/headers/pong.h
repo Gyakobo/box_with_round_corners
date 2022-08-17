@@ -115,6 +115,14 @@ private:
 
 public:
     Pong() {
+        vector<vec4> row_color;
+        for (int i=-1; i<32; i++) {
+            row_color.push_back(DEFAULT);
+        }
+        for (int i=-1; i<32; i++) {
+            sprite.push_back(row_color);
+        }
+
         grid::randomize();
         quit = false;
         up1 = 'w';
@@ -127,19 +135,11 @@ public:
 
         player1 = new Paddle(1, height/2 - 3);
         player2 = new Paddle(width-2, height/2-3);
-
     }
+
     Pong(int width, int height) : Pong() {
         this->width = width;
         this->height = height;
-
-        vector<vec4> row_color;
-        for (int i=-1; i<32; i++) {
-            row_color.push_back(DEFAULT);
-        }
-        for (int i=-1; i<32; i++) {
-            sprite.push_back(row_color);
-        }
     }
 
     ~Pong() {

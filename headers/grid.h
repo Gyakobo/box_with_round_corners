@@ -49,6 +49,8 @@ namespace grid {
 	void randomize();
 	int rand_range(int start, int end);
 
+	vec4 unit_length(const vec4& v);
+
 	enum eDir {
         STOP =		0,
         

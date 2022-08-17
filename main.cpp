@@ -16,12 +16,13 @@ const int width = 1280, height = 720;
 #define PONG				4
 #define _R2048				5
 #define GAME_OF_LIFE		6
+#define CLOCK				7
 
 // Example of a square
 #define Object				-1
 
 // Current STATE
-#define STATE GAME_OF_LIFE 
+#define STATE CLOCK 
 
 
 
@@ -86,6 +87,12 @@ int main()
 	conway.update();
 
 	vector<Renderable2D *> sprites = conway.getRenderables();
+
+#elif STATE == CLOCK
+	_Clock clock;
+	clock.update();
+	
+	vector<Renderable2D *> sprites = clock.getRenderables();
 
 #endif
 
@@ -180,6 +187,12 @@ int main()
 			conway.update();
 			
 			vector<Renderable2D *> sprites = conway.getRenderables();
+
+#elif STATE == CLOCK
+			clock.Draw();
+			clock.update();
+			
+			vector<Renderable2D *> sprites = clock.getRenderables();
 
 #endif
 

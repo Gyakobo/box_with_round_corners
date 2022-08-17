@@ -167,6 +167,12 @@ void Grid::Random()
 }
 
 namespace grid { 
+    vec4 unit_length(const vec4& v) {
+        float length = sqrt(v.x*v.x + v.y*v.y + v.z*v.z);
+		vec4 return_vector = vec4(v.x/length, v.y/length, v.z/length, v.w);
+		return return_vector;
+    }
+
     void randomize() {
 		uint32_t seed = 0;
 		FILE *devrnd = fopen("/dev/random", "r");

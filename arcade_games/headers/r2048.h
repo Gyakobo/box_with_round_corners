@@ -25,6 +25,7 @@ using namespace std;
 
 class R2048: public Grid {
 private:
+    int _width = 32, _height = 32;
     int width=4, height=4; 
     int board[4][4];
 

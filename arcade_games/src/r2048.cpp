@@ -106,7 +106,7 @@ void R2048::Draw() {
     bool change_color = true;
 
 
-
+    /*
     for (int i = 0; i < 4; ++i) {
         for (int j = 0; j < 1; ++j) {
             int current_board_numb = board[j][i];
@@ -132,6 +132,55 @@ void R2048::Draw() {
        }
 
        //numb_width = 0;
+    }
+    */
+
+    for(int i=0; i<4; i++) {
+        for(int j=0; j<4; j++) {
+            int current_board_numb = board[i][j];
+
+            for (int x=i*8; x<(i*8)+8; x++) {
+                for (int y=j*8; y<(j*8)+8; y++) {
+                    switch(current_board_numb) {
+                        case 2:
+                            DrawOnScreen(x, y, grid::unit_length(Number_2_color));
+                            break;
+                        case 4:
+                            DrawOnScreen(x, y, grid::unit_length(Number_4_color));
+                            break;
+                        case 8:
+                            DrawOnScreen(x, y, grid::unit_length(Number_8_color));
+                            break;
+                        case 16:
+                            DrawOnScreen(x, y, grid::unit_length(Number_16_color));
+                            break;
+                        case 32:
+                            DrawOnScreen(x, y, grid::unit_length(Number_32_color));
+                            break;
+                        case 64:
+                            DrawOnScreen(x, y, grid::unit_length(Number_64_color));
+                            break;
+                        case 128:
+                            DrawOnScreen(x, y, grid::unit_length(Number_128_color));
+                            break;
+                        case 256:
+                            DrawOnScreen(x, y, grid::unit_length(Number_256_color));
+                            break;
+                        case 512:
+                            DrawOnScreen(x, y, grid::unit_length(Number_512_color));
+                            break;
+                        case 1024:
+                            DrawOnScreen(x, y, grid::unit_length(Number_1024_color));
+                            break;
+                        case 2048:
+                            DrawOnScreen(x, y, grid::unit_length(Number_2048_color));
+                            break;
+                    }
+                }
+            }
+
+
+        }
     }
 
 
