@@ -22,7 +22,7 @@ const int width = 1280, height = 720;
 #define Object				-1
 
 // Current STATE
-#define STATE CLOCK 
+#define STATE ANIMATION_PARROT 
 
 
 
