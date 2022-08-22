@@ -12,6 +12,7 @@ Following games need to be done before 1st August to avoid deadlines: Wordle, 20
 1. Atari Breakout
 1. Space Invaders/ Galaga
 1. <span style="color: #ed463e">**Connect Four**</span>
+1. <span style="color: #ed463e">**Guess the character**</span>
 1. Checkers
 1. <span style="color: #ed463e">**Chess**</span>
 1. Asteroids
@@ -40,6 +41,53 @@ Following games need to be done before 1st August to avoid deadlines: Wordle, 20
 
 1. > When stacked into **4x1 mode**, emulate time with a waving flag
 1. > Would be great if it showed the number of likes on a selected tic toc with a huge tic toc colored(white, red and blue) sign
+1. Default booting animation:
+    <details>
+        <summary>Edison - <span style="color: green">light bulb</span></summary>
+        <ul> 
+            <li>Developed upon the incandescant(vacuum bulb)</li> 
+            <li>Improved the Phonograph</li>
+            <li>Developed upon motion pictures</li>
+            <li>Came up with Alkaline Storage Batteries</li>
+        </ul>
+    </details>
+
+    <details>
+        <summary>Copernicus</summary> 
+        <ul>
+            <li>Came up with the idea of a 'heliocentric theory of the solar system'(Earth and other planets revolve around the sun)</li> 
+        </ul>
+    </details>
+    
+    
+    <details>
+        <summary>Galileo</summary>
+        <ul>
+            <li>Found Craters and mountains on the Moon</li>
+            <li>Discovered the phases of Venus</li> 
+            <li>Quantified Jupiter's moons</li>
+            <li>Understood the structure of the Milky way</li>
+        </ul> 
+    </details>
+
+
+    <details>
+        <summary>Michelangelo</summary> 
+    </details>
+
+
+    <details></details>
+    <details></details>
+    <details></details>
+    <details></details>
+    <details></details>
+    <details></details>
+    <details></details>
+    <details></details>
+    <details></details>
+    <details></details>
+    <details></details>
+    <details></details>
 
 # Animation To-Do list
 
