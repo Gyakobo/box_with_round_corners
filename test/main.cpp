@@ -2,45 +2,25 @@
 #include <string>
 #include <stdio.h>
 
+#include <bitset>
+#include <cassert>
+#include <map>
+
 using namespace std;
 
-class Entity {
-protected:
-	string c_out = "This is an entity\n";
-public:
-	Entity();
-	virtual void output() {
-		cout << c_out;
-	}
-};
-Entity::Entity() {}
+typedef bitset<2> two_bits;
 
-
-class Player: public Entity {
-private:
-
-public:
-	Player();
-	void output() {
-		cout << "This is a player\n";
-	}
-};
-Player::Player() {}
-
-void PrintName(Entity* entity) {
-	entity->output();
-}
+#define c0 0B01
 
 int main() {
-	TEST:	
-	cout << "Start all over\n";
+	two_bits var[8];
 
-	for (int i=0; i<10; i++) {
-		if (i == 4) continue TEST;
-		
-		cout << i << "\n";
+	for (int i=0; i<8; i++) {
+		var[i] = c0;
 	}
 
+	cout << "Moment of truth" << "\n";
+	cout << sizeof(var) << "\n";
 
 	return 0;
 }
