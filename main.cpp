@@ -26,6 +26,7 @@ const int width = 1280, height = 720;
 
 
 
+
 int main()
 {
 	Window window("Box Simulator", width, height);
