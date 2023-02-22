@@ -87,7 +87,7 @@ vec4& vec4::operator/=(const vec4& other) {
 
 bool vec4::operator==(const vec4& other) {
 	if (x == other.x && y == other.y) return true;
-	else false;	
+	else return false;	
 }
 bool vec4::operator!=(const vec4& other) {
 	return !(*this == other);	

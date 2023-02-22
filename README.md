@@ -6,6 +6,7 @@ Following games need to be done before 1st August to avoid deadlines: Wordle, 20
 1. <span style="color: green">**Pong**  (Kinda came as a breeze)</span>
 1. <span style="color: green">**Snake** (Simpler than I thought)</span>
 1. Pacman
+1. Among us
 1. <span style="color: #ed463e">**Tetris**</span>
 1. <span style="color: #ed463e">**Sudoku** (This game is evil)</span>
 1. <span style="color: #ed463e">**Minesweeper**</span>

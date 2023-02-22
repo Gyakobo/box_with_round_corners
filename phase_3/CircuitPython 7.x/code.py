@@ -26,15 +26,15 @@ from adafruit_led_animation.color import PURPLE, JADE, AMBER
 # Update to match the pin connected to your NeoPixels
 pixel_pin = board.D6
 # Update to match the number of NeoPixels you have connected
-pixel_num = 32
+pixel_num = 64 
 
 pixels = neopixel.NeoPixel(pixel_pin, pixel_num, brightness=0.5, auto_write=False)
 
 pixel_wing_vertical = helper.PixelMap.vertical_lines(
-    pixels, 8, 4, helper.horizontal_strip_gridmap(8, alternating=False)
+    pixels, 8, 8, helper.horizontal_strip_gridmap(8, alternating=False)
 )
 pixel_wing_horizontal = helper.PixelMap.horizontal_lines(
-    pixels, 8, 4, helper.horizontal_strip_gridmap(8, alternating=False)
+    pixels, 8, 8, helper.horizontal_strip_gridmap(8, alternating=False)
 )
 
 comet_h = Comet(
