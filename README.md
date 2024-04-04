@@ -76,20 +76,6 @@ Following games need to be done before 1st August to avoid deadlines: Wordle, 20
         <summary>Michelangelo</summary> 
     </details>
 
-
-    <details></details>
-    <details></details>
-    <details></details>
-    <details></details>
-    <details></details>
-    <details></details>
-    <details></details>
-    <details></details>
-    <details></details>
-    <details></details>
-    <details></details>
-    <details></details>
-
 # Animation To-Do list
 
 1. ~~Party Parrot~~
